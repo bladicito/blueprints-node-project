@@ -1,0 +1,15 @@
+**/node_modules
+**/package.json
+**/package-lock.json
+**/public
+**/.idea
+**/.run
+
+**/frontend/.cache
+**/frontend/.eslintcache
+**/frontend/dist
+**/frontend/node_modules
+**/frontend/storybook-static
+**/frontend/build
+
+
