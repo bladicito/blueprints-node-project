@@ -2,7 +2,7 @@ const modifierState = (
   componentName: string,
   modifier: Array<string> | null | undefined,
   state: Array<string> | null | undefined
-) => {
+): string => {
   const cssClasses = [componentName];
   if (modifier && Array.isArray(modifier)) {
     modifier.forEach((mod) => {
