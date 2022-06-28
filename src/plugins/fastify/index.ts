@@ -17,6 +17,10 @@ const pluginCallback: FastifyPluginCallback = (
       .send(content);
   });
 
+  fastify.get('/routes', (request, reply) => {
+    reply.type(EReplyTypes.TEXT).send(fastify.printRoutes());
+  });
+
   done();
 };
 export default fastifyPlugin(pluginCallback);
