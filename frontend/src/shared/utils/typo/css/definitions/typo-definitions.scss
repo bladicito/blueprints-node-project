@@ -1,0 +1,135 @@
+// Typo definitions for all breakpoints
+$typography-definitions: (
+  xs: (
+    body: (
+      'font-size': 24px,
+      'line-height': 24px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  ),
+  sm: (
+    body: (
+      'font-size': 22px,
+      'line-height': 28px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  ),
+  md: (
+    body: (
+      'font-size': 22px,
+      'line-height': 28px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  ),
+  lg: (
+    body: (
+      'font-size': 22px,
+      'line-height': 28px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  ),
+  xl: (
+    body: (
+      'font-size': 22px,
+      'line-height': 28px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  ),
+  ul: (
+    body: (
+      'font-size': 22px,
+      'line-height': 28px,
+      'font-weight': 300,
+    ),
+    value: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 200,
+    ),
+    label: (
+      'font-size': 20px,
+      'line-height': 20px,
+      'font-weight': 400,
+    ),
+    title: (
+      'font-size': 30px,
+      'line-height': 30px,
+      'font-weight': 500,
+    ),
+  )
+);

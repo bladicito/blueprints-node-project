@@ -1,0 +1,44 @@
+@import '../../../base/grid/css/variables/grid';
+@import '../../webfonts/css/webfonts';
+@import './definitions/typo-definitions';
+
+@function typography-get-font-definition($breakpoint, $type) {
+  $typography-breakpoint: map-get($typography-definitions, $breakpoint);
+  $typography-font-definition: map-get($typography-breakpoint, $type);
+  @if ($typography-font-definition == null) {
+    @warn 'Unknown typography definition for breakpoint '#{$breakpoint}' and type #{$type}.';
+  }
+  @return $typography-font-definition;
+}
+
+@mixin getDefinition($font-definition) {
+  @if (map-get($font-definition, 'font-family')) {
+    font-family: map-get($font-definition, 'font-family');
+  } @else {
+    font-family: $font-family-roboto;
+  }
+
+  font-size: map-get($font-definition, 'font-size');
+  line-height: map-get($font-definition, 'line-height');
+  font-weight: map-get($font-definition, 'font-weight');
+  letter-spacing: map-get($font-definition, 'letter-spacing');
+
+  @if (map-get($font-definition, 'text-transform') != null) {
+    text-transform: map-get($font-definition, 'text-transform');
+  }
+}
+
+/*
+ * Mixin to use in the code
+ *
+ * Params:
+ *  - $type: the typo definition (e.g. title, lead, body)
+*/
+@mixin typo($type) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      $font-definition: typography-get-font-definition($breakpoint, $type);
+      @include getDefinition($font-definition);
+    }
+  }
+}

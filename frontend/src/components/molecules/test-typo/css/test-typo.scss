@@ -1,0 +1,24 @@
+@import './src/shared/utils/typo/css/typo';
+@import './src/shared/utils/spacing/css/spacing';
+
+.m-test-typo {
+  &__title {
+    @include typo('title');
+  }
+
+  &__body {
+    @include typo('body');
+  }
+
+  &__value {
+    @include typo('value');
+  }
+
+  &__label {
+    @include typo('label');
+  }
+
+  p:not(p:last-child) {
+    @include spacing-v('m', 'fix');
+  }
+}

@@ -1,0 +1,68 @@
+/* stylelint-disable indentation */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  font-display: fallback;
+  src: local('Roboto Thin'), local('roboto-thin'),
+  url('../fonts/Roboto/roboto-thin.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-thin.woff') format('woff'),
+  url('../fonts/Roboto/roboto-thin.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: local('Roboto Light'), local('roboto-light'),
+  url('../fonts/Roboto/roboto-light.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-light.woff') format('woff'),
+  url('../fonts/Roboto/roboto-light.woff2') format('woff2')
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local('Roboto Regular'), local('roboto-regular'),
+  url('../fonts/Roboto/roboto-regular.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-regular.woff') format('woff'),
+  url('../fonts/Roboto/roboto-regular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+  src: local('Roboto Medium'), local('roboto-medium'),
+  url('../fonts/Roboto/roboto-medium.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-medium.woff') format('woff'),
+  url('../fonts/Roboto/roboto-medium.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: local('Roboto Bold'), local('roboto-bold'),
+  url('../fonts/Roboto/roboto-bold.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-bold.woff') format('woff'),
+  url('../fonts/Roboto/roboto-bold.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: local('Roboto Black'), local('roboto-black'),
+  url('../fonts/Roboto/roboto-black.ttf') format('ttf'),
+  url('../fonts/Roboto/roboto-black.woff') format('woff'),
+  url('../fonts/Roboto/roboto-black.woff2') format('woff2')
+}

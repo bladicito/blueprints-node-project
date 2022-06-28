@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////
+// Breakpoints
+//////////////////////////////////////////////////////////
+
+// Ultra small screen
+$size-us: 0;
+$size-us-min: $size-us;
+
+// Extra small screen (for min-width body)
+$size-xs: 320px;
+$size-xs-min: $size-xs;
+
+// Small screen
+$size-sm: 480px;
+$size-sm-min: $size-sm;
+
+// Medium screen
+$size-md: 768px;
+$size-md-min: $size-md;
+
+// Large screen
+$size-lg: 1024px;
+$size-lg-min: $size-lg;
+
+// Extra large screen
+$size-xl: 1280px;
+$size-xl-min: $size-xl;
+
+// Ultra large screen
+$size-ul: 1440px;
+$size-ul-min: $size-ul;
+
+//////////////////////////////////////////////////////////
+// Media Queries
+//////////////////////////////////////////////////////////
+
+$bp-sm: 'min-width: #{$size-sm-min}';
+$bp-md: 'min-width: #{$size-md-min}';
+$bp-lg: 'min-width: #{$size-lg-min}';
+$bp-xl: 'min-width: #{$size-xl-min}';
+$bp-ul: 'min-width: #{$size-ul-min}';
+
+$bp-xs-max: 'max-width: #{($size-sm-min - 1)}';
+$bp-sm-max: 'max-width: #{($size-md-min - 1)}';
+$bp-md-max: 'max-width: #{($size-lg-min - 1)}';
+$bp-lg-max: 'max-width: #{($size-xl-min - 1)}';
+$bp-xl-max: 'max-width: #{($size-ul-min - 1)}';

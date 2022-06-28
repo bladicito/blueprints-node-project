@@ -1,0 +1,55 @@
+@import '../../../../utils/breakpoints/css/breakpoints';
+
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+$grid-breakpoints: (
+  xs: $size-us-min,
+  sm: $size-sm-min,
+  md: $size-md-min,
+  lg: $size-lg-min,
+  xl: $size-xl-min,
+  ul: $size-ul-min,
+);
+
+// Container
+$grid-container-gutter-xs: 2 * 20px;
+$grid-container-gutter-sm: 2 * 20px;
+$grid-container-gutter-md: 2 * 20px;
+$grid-container-gutter-lg: 2 * 40px;
+$grid-container-gutter-xl: 2 * 40px;
+$grid-container-gutter-ul: 2 * 40px;
+
+$grid-container-gutters: (
+  xs: $grid-container-gutter-xs,
+  sm: $grid-container-gutter-sm,
+  md: $grid-container-gutter-md,
+  lg: $grid-container-gutter-lg,
+  xl: $grid-container-gutter-xl,
+  ul: $grid-container-gutter-ul,
+);
+
+$container-max-widths: (
+  xs: 100%,
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 100%,
+  ul: $size-ul,
+);
+
+// Columns
+$grid-columns: 12;
+
+$grid-column-gutter-width-xs: 8px;
+$grid-column-gutter-width-md: 16px;
+$grid-column-gutter-width-lg: 24px;
+
+$grid-column-gutters: (
+  xs: $grid-column-gutter-width-xs,
+  sm: $grid-column-gutter-width-xs,
+  md: $grid-column-gutter-width-md,
+  lg: $grid-column-gutter-width-lg,
+  xl: $grid-column-gutter-width-lg,
+  ul: $grid-column-gutter-width-lg,
+);

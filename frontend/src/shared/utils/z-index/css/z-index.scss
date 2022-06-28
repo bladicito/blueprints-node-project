@@ -1,0 +1,37 @@
+// Based on https://webdevstudios.com/2015/09/22/using-sass-to-manage-layers-z-index/
+
+// z-index Mapping for all layers
+//
+// Usage:
+// .m-notification {
+//   @include z-index('overlay');
+// }
+//
+// the first element in $layers is on the top (high z-index)
+// The last element in $layers list is on the bottom (low z-index)
+
+$layers: (
+  'notification', // posibible to show notifications even if overlay or notification active
+  'loading', // just circles
+  'mask', // mask containing circles
+  'overlay',
+  'flyout',
+  'menu'
+) !default;
+
+@function layer-index($layer, $adjust: 0) {
+  @if index($layers, $layer) == null {
+    @error '$layer: #{quote($layer)} is an unknown layer.';
+  }
+  @if (($adjust > 4) or ($adjust < -4)) {
+    @error '$layer: #{quote($layer)} must only be adjusted by ±4 but got "#{$adjust}".';
+  }
+
+  // This just returns the named layer's
+  // location in the list, which becomes it's z-index.
+  @return (1 + length($layers) - index($layers, $layer)) * 10 + $adjust;
+}
+
+@mixin z-index($layer, $adjust: 0) {
+  z-index: layer-index($layer, $adjust);
+}

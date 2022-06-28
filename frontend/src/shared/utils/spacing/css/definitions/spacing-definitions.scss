@@ -1,0 +1,100 @@
+$spacing-vertical-fix-factor: 4px;
+$spacing-vertical-flex-factor: 80px;
+
+$spacing-vertical-factors: (
+  'fix': 4px,
+  'flex': 8px,
+);
+
+$spacing-horizontal-factors: (
+  'fix': 4px,
+  'flex': 20px,
+);
+
+$spacing-default-flexibility: 'flex';
+
+/* stylelint-disable indentation */
+
+// The fix definition means, that the value of the spacing is fix for every viewport. Just one fix value for all viewports.
+$spacing-definitions-fix: (
+  horizontal: (
+    xxs: map-get($spacing-horizontal-factors, 'fix'), // 4px
+    xs: map-get($spacing-horizontal-factors, 'fix') * 2, // 8px
+    s: map-get($spacing-horizontal-factors, 'fix') * 4, // 16px
+    m: map-get($spacing-horizontal-factors, 'fix') * 6, // 24px
+    l: map-get($spacing-horizontal-factors, 'fix') * 10, // 40px
+    xl: map-get($spacing-horizontal-factors, 'fix') * 20, // 80px
+  ),
+  vertical: (
+    xxs: map-get($spacing-vertical-factors, 'fix'), // 4px
+    xs: map-get($spacing-vertical-factors, 'fix') * 2, // 8px
+    s: map-get($spacing-vertical-factors, 'fix') * 4, // 16px
+    m: map-get($spacing-vertical-factors, 'fix') * 6, // 24px
+    l: map-get($spacing-vertical-factors, 'fix') * 10, // 40px
+    xl: map-get($spacing-vertical-factors, 'fix') * 20, // 80px
+  ),
+);
+
+// The flex definition means, that every viewport can have different sizes of spacing xxs - xxl.
+$spacing-definitions-flex: (
+  horizontal: (
+    bpxs: (
+      s: 0, // 0px
+    ),
+    bpsm: (
+      s: 0, // 0px
+    ),
+    bpmd: (
+      s: 0, // 0px
+    ),
+    bplg: (
+      s: map-get($spacing-horizontal-factors, 'flex'), // 20px
+    ),
+    bpxl: (
+      s: map-get($spacing-horizontal-factors, 'flex') * 2, // 40px
+    ),
+    bpul: (
+      s: map-get($spacing-horizontal-factors, 'flex') * 2, // 40px
+    ),
+  ),
+  vertical: (
+    bpxs: (
+      s: map-get($spacing-vertical-factors, 'flex'), // 8px
+      m: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      l: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 10, // 80px
+    ),
+    bpsm: (
+      s: map-get($spacing-vertical-factors, 'flex'), // 8px
+      m: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      l: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 10, // 80px
+    ),
+    bpmd: (
+      s: map-get($spacing-vertical-factors, 'flex'), // 8px
+      m: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      l: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 10, // 80px
+    ),
+    bplg: (
+      s: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      m: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      l: map-get($spacing-vertical-factors, 'flex') * 5, // 40px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 20, // 160px
+    ),
+    bpxl: (
+      s: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      m: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      l: map-get($spacing-vertical-factors, 'flex') * 5, // 40px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 20, // 160px
+    ),
+    bpul: (
+      s: map-get($spacing-vertical-factors, 'flex') * 2, // 16px
+      m: map-get($spacing-vertical-factors, 'flex') * 3, // 24px
+      l: map-get($spacing-vertical-factors, 'flex') * 5, // 40px
+      xxl: map-get($spacing-vertical-factors, 'flex') * 20, // 160px
+    ),
+  ),
+);
+
+/* stylelint-enable indentation */

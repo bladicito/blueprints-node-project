@@ -1,0 +1,23 @@
+@import '../../../../shared/utils/breakpoints/css/breakpoints';
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/typo/css/typo';
+
+html {
+  @include typo('body');
+  min-width: $size-xs-min;
+  width: 100%;
+  color: $color-black-vader;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-white-russian-white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: currentColor;
+}

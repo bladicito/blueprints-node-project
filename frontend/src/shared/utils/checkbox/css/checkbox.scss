@@ -1,0 +1,46 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/visually-hidden/css/visually-hidden';
+
+@mixin checkboxGenerator($size) {
+  /* stylelint-disable */
+  &__input {
+    @include visually-hidden();
+
+    &:checked + .a-checkbox__label::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size - 8px;
+      height: $size - 8px;
+      margin-top: 4px;
+      margin-left: 4px;
+      border: 3px solid currentColor;
+      background-color: currentColor;
+    }
+
+    + .a-checkbox__label::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $size;
+      height: $size;
+      border: 2px solid currentColor;
+      background-color: $color-stormtrooper-white;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: $size;
+    margin-bottom: 0;
+    padding-left: $size + 4px;
+    text-transform: none;
+    white-space: normal;
+    cursor: pointer;
+  }
+  /* stylelint-enable */
+}

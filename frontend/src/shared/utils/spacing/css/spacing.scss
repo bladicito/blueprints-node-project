@@ -1,0 +1,106 @@
+@import '../../../base/grid/css/variables/grid';
+@import '../../breakpoints/css/breakpoints';
+@import './definitions/spacing-definitions';
+
+@function get-definition-for-flexibility($flexibility) {
+  @if ($flexibility == 'fix') {
+    @return $spacing-definitions-fix;
+  }
+  @if ($flexibility == 'flex') {
+    @return $spacing-definitions-flex;
+  }
+  @warn 'Unknown typography flexibility '#{$flexibility}'.';
+}
+
+@function space-get-size-definition($direction, $breakpoint, $size, $flexibility) {
+  $space-flexibility: get-definition-for-flexibility($flexibility);
+  @if ($flexibility == 'flex') {
+    $space-breakpoint: map-get(map_get($space-flexibility, $direction), $breakpoint);
+    @if ($space-breakpoint == null) {
+      @warn 'Unknown space definition for flexibility '#{$flexibility}', breakpoint '#{$breakpoint}'.';
+    }
+    $space-size-definition: map_get($space-breakpoint, $size);
+    @return $space-size-definition;
+  }
+  @if ($flexibility == 'fix') {
+    $space-size-definition: map-get(map_get($space-flexibility, $direction), $size);
+    @return $space-size-definition;
+  }
+}
+
+// Map breakpoints and sizes to get correct pixel value for different media queries
+@mixin getSpaceDefinitionForViewport($direction, $breakpoint, $size, $flexibility, $rule, $negative) {
+  $spacing: space-get-size-definition($direction, $breakpoint, $size, $flexibility);
+  @if ($negative == 'negative') {
+    #{$rule}: - $spacing;
+  } @else {
+    #{$rule}: $spacing;
+  }
+}
+
+//////////////////////////////////////////////////////////
+// Mixins to use in the code
+//////////////////////////////////////////////////////////
+
+// Mixin for vertical spacings
+@mixin spacing-v($size, $flexibility: $spacing-default-flexibility, $rule: 'margin-bottom', $negative: '') {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @include getSpaceDefinitionForViewport('vertical', 'bp#{$breakpoint}', $size, $flexibility, $rule, $negative);
+    }
+  }
+}
+
+// Mixin for horizontal spacings
+@mixin spacing-h($size, $flexibility: $spacing-default-flexibility, $rule: 'margin-right', $negative: '') {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @include getSpaceDefinitionForViewport('horizontal', 'bp#{$breakpoint}', $size, $flexibility, $rule, $negative);
+    }
+  }
+}
+
+/*
+	Vertical margins
+
+	Create a margin-bottom or margin-top for different viewports.
+
+	Params:
+		- $size: gets the size definition according to the size (e.g. s, m, l)
+		. $flexibility: possible values are 'flex' or 'fix'
+		- $negative: if true, the value will be negative
+*/
+@mixin margin-top($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-v($size, $flexibility, 'margin-top', $negative);
+}
+
+@mixin margin-bottom($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-v($size, $flexibility, 'margin-bottom', $negative);
+}
+
+// Vertical paddings
+@mixin padding-top($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-v($size, $flexibility, 'padding-top', $negative);
+}
+
+@mixin padding-bottom($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-v($size, $flexibility, 'padding-bottom', $negative);
+}
+
+// Horizontal margins
+@mixin margin-left($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-h($size, $flexibility, 'margin-left', $negative);
+}
+
+@mixin margin-right($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-h($size, $flexibility, 'margin-right', $negative);
+}
+
+// Horizontal paddings
+@mixin padding-left($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-h($size, $flexibility, 'padding-left', $negative);
+}
+
+@mixin padding-right($size, $flexibility: $spacing-default-flexibility, $negative: false) {
+  @include spacing-h($size, $flexibility, 'padding-right', $negative);
+}

@@ -1,0 +1,146 @@
+@import '../../../../shared/utils/animations/css/animations';
+@import '../../../../shared/utils/colors/css/colors';
+@import '../../../../shared/utils/spacing/css/spacing';
+
+// Sets both font-size and line-height to 0
+@mixin h-zero-font() {
+  font-size: 0;
+  line-height: 0;
+}
+
+@mixin h-hide() {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin h-show() {
+  display: block;
+  visibility: visible;
+}
+
+@mixin h-ellipsis() {
+  // Ellipsis: … (shorten single-line text with three dots to fit parent)
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+@mixin h-word-break() {
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@mixin h-block-link() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  z-index: 1;
+}
+
+@mixin h-background-overflow($background-color: $color-vader-black, $amount: 5000px, $padding-offset-left: 0) {
+  content: '';
+  // Styles needed for the mixin to work properly
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  // The actual styles for overflowing background
+  padding-left: $amount + $padding-offset-left;
+  padding-right: $amount;
+  margin-left: -$amount;
+  margin-right: -$amount;
+  background-color: $background-color;
+}
+
+@mixin wrapping-link($element) {
+  @at-root #{$element} {
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* stylelint-disable */
+  #{$element + $element} {
+    position: absolute;
+    z-index: 1;
+  }
+  /* stylelint-enable */
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@mixin h-hide-scrollbar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin h-pipe($direction, $offset: 0) {
+  position: relative;
+
+  @if ($direction == 'left') {
+    @include margin-left('xs', 'fix');
+    @include padding-left('xs', 'fix');
+  } @else {
+    @include margin-right('xs', 'fix');
+    @include padding-right('xs', 'fix');
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: $offset;
+    bottom: $offset;
+
+    @if ($direction == 'left') {
+      left: 0;
+    } @else {
+      right: 0;
+    }
+
+    border-left: 1px solid $color-vader-black;
+  }
+}
+
+/* stylelint-disable plugin/stylelint-bem-namics */
+%h-glow-listener {
+  &:hover {
+    .h-glow-object {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+%h-opacity-layer {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-bowling-black, 0.25);
+    z-index: 1;
+  }
+}
+
+/* stylelint-enable plugin/stylelint-bem-namics */
