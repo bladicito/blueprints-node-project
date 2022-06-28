@@ -1,0 +1,30 @@
+root = true
+
+### All files
+[*]
+# Force charset utf-8
+charset = utf-8
+# Force newline ending every file & trim trailing whitespace
+insert_final_newline = true
+trim_trailing_whitespace = true
+# Indentation
+indent_style = space
+indent_size = 2
+
+[*.{css,scss,less,js,json,ts,tsx, sass,php,html,hbs,mustache,phtml,html.twig}]
+
+### Markdown
+[*.md]
+indent_style = space
+trim_trailing_whitespace = false
+
+### YAML
+[*.yml]
+indent_style = space
+indent_size = 2
+
+### Specific files
+[{package,bower,lerna}.json]
+indent_style = space
+indent_size = 2
+
