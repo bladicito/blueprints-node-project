@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^4.1.0",
+    "fastify-plugin": "^3.0.1",
     "lodash": "^4.17.21",
     "prettier": "^2.7.1"
   },
