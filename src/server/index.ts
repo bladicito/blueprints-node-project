@@ -4,6 +4,7 @@ import { EReplyTypes } from '../utils/enums/ReplyTypes.enum';
 import fastifyUtils from '../plugins/fastify';
 import fastifyStatic from '@fastify/static';
 import path from 'path';
+import appRoutes from '../endpoints/routes';
 
 export const config = configDefault;
 const server: FastifyInstance = fastify({ logger: { level: config.logs.level } });
@@ -15,9 +16,11 @@ declare module 'fastify' {
   }
 }
 
+server.register(appRoutes);
+
 server.register((instance, opts, next) => {
   const isCompiled = process.env.TARGET === 'compiled';
-  const levelUp = isCompiled ? '../..' : '..';
+  const levelUp = isCompiled ? '../../..' : '../..';
   instance.register(fastifyStatic, {
     root: path.join(__dirname, levelUp, 'frontend', 'build'),
   });
