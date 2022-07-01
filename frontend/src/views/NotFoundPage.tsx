@@ -8,7 +8,6 @@
 
 import React from 'react';
 import modifierState from '../utils/helpers/modifierState';
-import TestTypo from '../components/molecules/test-typo/TestTypo';
 
 const NotFoundPage = () => {
   const componentName = 'p-common';

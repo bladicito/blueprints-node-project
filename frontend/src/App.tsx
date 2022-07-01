@@ -6,17 +6,19 @@ import NotFoundPage from './views/NotFoundPage';
 
 function App() {
   return (
-    <div className="your-app">
-      <div className="container">
-        <Router>
-          <Routes>
-            <Route path="/" element={<IndexPage />} />
-            <Route path="/second" element={<SecondPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Router>
+    <React.StrictMode>
+      <div className="your-app">
+        <div className="container">
+          <Router>
+            <Routes>
+              <Route path="/" element={<IndexPage />} />
+              <Route path="/second" element={<SecondPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Router>
+        </div>
       </div>
-    </div>
+    </React.StrictMode>
   );
 }
 
