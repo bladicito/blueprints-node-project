@@ -8,9 +8,6 @@
 
 import React from 'react';
 import modifierState from '../../../utils/helpers/modifierState';
-import './css/test-typo.scss';
-
-// interface IProps {}
 
 const TestTypo = () => {
   const componentName = 'm-test-typo';

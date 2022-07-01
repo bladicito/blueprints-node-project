@@ -1,0 +1,7 @@
+@import '../../../src/shared/utils/typo/css/typo';
+
+.p-common {
+  h1 {
+    @include typo('title');
+  }
+}
