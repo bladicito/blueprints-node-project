@@ -18,7 +18,7 @@
     @include typo('label');
   }
 
-  p:not(p:last-child) {
+  & > *:not(*:last-child) {
     @include spacing-v('m', 'fix');
   }
 }

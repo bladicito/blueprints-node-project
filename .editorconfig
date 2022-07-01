@@ -11,7 +11,7 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
 
-[*.{css,scss,less,js,json,ts,tsx, sass,php,html,hbs,mustache,phtml,html.twig}]
+[*.{css,scss,less,js,json,ts,tsx,sass,php,html,hbs,mustache,phtml,html.twig}]
 
 ### Markdown
 [*.md]

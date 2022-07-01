@@ -8,14 +8,19 @@
 
 import React from 'react';
 import modifierState from '../../../utils/helpers/modifierState';
+import './css/test-typo.scss';
 
-const TestTypo = () => {
+interface IProps {
+  title: string;
+}
+
+const TestTypo = ({ title }: IProps) => {
   const componentName = 'm-test-typo';
   const cssClasses = modifierState(componentName, [], []);
 
   return (
     <div className={cssClasses}>
-      <p className="m-test-typo__title">Welcome to the frontend where the fox jumped the bla bla </p>
+      <p className="m-test-typo__title">{title}</p>
       <p className="m-test-typo__body">Welcome to the frontend where the fox jumped the bla bla</p>
       <p className="m-test-typo__label">Welcome to the frontend where the fox jumped the bla bla</p>
       <p className="m-test-typo__value">Welcome to the frontend where the fox jumped the bla bla</p>

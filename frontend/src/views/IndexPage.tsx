@@ -16,8 +16,7 @@ const IndexPage = () => {
 
   return (
     <div className={cssClasses}>
-      <h1>This is the index page</h1>
-      <TestTypo />
+      <TestTypo title="First Page" />
     </div>
   );
 };

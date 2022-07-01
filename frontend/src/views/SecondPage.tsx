@@ -16,10 +16,7 @@ const SecondPage = () => {
 
   return (
     <div className={cssClasses}>
-      <h1>This is the SECOND page</h1>
-      <TestTypo />
-      <p>Testing paragraph</p>
-      <TestTypo />
+      <TestTypo title="Second Page" />
     </div>
   );
 };
