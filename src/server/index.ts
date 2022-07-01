@@ -5,6 +5,7 @@ import fastifyUtils from '../plugins/fastify';
 import fastifyStatic from '@fastify/static';
 import path from 'path';
 import appRoutes from '../endpoints/routes';
+import os from 'os';
 
 export const config = configDefault;
 const server: FastifyInstance = fastify({ logger: { level: config.logs.level } });
@@ -15,6 +16,12 @@ declare module 'fastify' {
     uncached: (options: { type: EReplyTypes; content: any }) => void;
   }
 }
+
+const hostname = os.hostname();
+server.addHook('onRequest', (req, rep, next) => {
+  rep.header('X-Served-By', hostname);
+  next();
+});
 
 server.register(appRoutes);
 

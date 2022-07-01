@@ -1,14 +1,7 @@
 import server, { config, logger } from './server';
-import os from 'os';
 
 const terminalTitle = `\x1B]0;${config.projectName}\x07`;
 process.stdout.write(terminalTitle);
-
-const hostname = os.hostname();
-server.addHook('onRequest', (req, rep, next) => {
-  rep.header('X-Served-By', hostname);
-  next();
-});
 
 (async () => {
   try {
