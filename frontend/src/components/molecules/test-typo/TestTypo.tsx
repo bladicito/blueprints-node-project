@@ -21,9 +21,15 @@ const TestTypo = ({ title }: IProps) => {
   return (
     <div className={cssClasses}>
       <p className="m-test-typo__title">{title}</p>
+      <p className="m-test-typo__title-one">{title}</p>
+      <p className="m-test-typo__title-two">{title}</p>
+      <p className="m-test-typo__title-three">{title}</p>
+      <hr />
       <p className="m-test-typo__body">Welcome to the frontend where the fox jumped the bla bla</p>
-      <p className="m-test-typo__label">Welcome to the frontend where the fox jumped the bla bla</p>
-      <p className="m-test-typo__value">Welcome to the frontend where the fox jumped the bla bla</p>
+      <p className="m-test-typo__body-one">Welcome to the frontend where the fox jumped the bla bla</p>
+      <p className="m-test-typo__body-two">Welcome to the frontend where the fox jumped the bla bla</p>
+      <p className="m-test-typo__body-three">Welcome to the frontend where the fox jumped the bla bla</p>
+      <p className="m-test-typo__body-four">Welcome to the frontend where the fox jumped the bla bla</p>
     </div>
   );
 };

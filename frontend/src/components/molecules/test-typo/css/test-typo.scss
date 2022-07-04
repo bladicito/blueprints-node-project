@@ -6,16 +6,36 @@
     @include typo('title');
   }
 
+  &__title-one {
+    @include typo('title-1');
+  }
+
+  &__title-two {
+    @include typo('title-2');
+  }
+
+  &__title-three {
+    @include typo('title-3');
+  }
+
   &__body {
     @include typo('body');
   }
 
-  &__value {
-    @include typo('value');
+  &__body-one {
+    @include typo('body-1');
   }
 
-  &__label {
-    @include typo('label');
+  &__body-two {
+    @include typo('body-2');
+  }
+
+  &__body-three {
+    @include typo('body-3');
+  }
+
+  &__body-four {
+    @include typo('body-4');
   }
 
   & > *:not(*:last-child) {
