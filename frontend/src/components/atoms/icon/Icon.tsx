@@ -10,9 +10,8 @@ interface IProps {
   type: EIcon;
 }
 
-const Icon = (props: IProps) => {
+const Icon = ({ modifier, state, type }: IProps) => {
   const componentName = 'a-icon';
-  const { modifier, state, type } = props;
   const cssClasses = modifierState(componentName, modifier, state);
 
   const svgBannerFile = `${svgBanner}#${type}`;
