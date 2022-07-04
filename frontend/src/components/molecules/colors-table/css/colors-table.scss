@@ -1,0 +1,87 @@
+@import './src/shared/utils/colors/css/colors';
+@import './src/shared/utils/typo/css/typo';
+@import './src/shared/utils/spacing/css/spacing';
+
+.m-colors-table {
+
+  &__row {
+    align-items: center;
+    @include spacing-v('l', 'fix');
+  }
+
+  &__col-title {
+    @include spacing-v('s', 'fix');
+  }
+
+
+  &__color-name {
+    @include typo('body-4')
+  }
+
+  &__color {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid $color-gray-anatomy;
+
+    &--green-1 {
+      background-color: $color-green-yoda;
+    }
+
+    &--green-2 {
+      background-color: $color-green-baby-yoda;
+    }
+
+    &--green-3 {
+      background-color: $color-green-jarjarbinks;
+    }
+
+    &--green-4 {
+      background-color: $color-green-jabba;
+    }
+
+    &--green-5 {
+      background-color: $color-green-luke-saber;
+    }
+
+    &--green-6 {
+      background-color: $color-green-eco;
+    }
+
+    &--white-1 {
+      background-color: $color-white-stormtrooper;
+    }
+
+    &--white-2 {
+      background-color: $color-gray-anatomy;
+    }
+
+    &--gray-1 {
+      background-color: $color-gray-rat;
+    }
+
+    &--gray-2 {
+      background-color: $color-gray-matter;
+    }
+    &--gray-3 {
+      background-color: $color-gray-anatomy;
+    }
+
+    &--red-1 {
+      background-color: $color-red-vader-saber;
+    }
+
+    &--red-2 {
+      background-color: $color-red-darth-maul;
+    }
+
+    &--blue-1 {
+      background-color: $color-blue-anakin-saber;
+    }
+
+    &--blue-2 {
+      background-color: $color-blue-r2d2-lines;
+    }
+  }
+}

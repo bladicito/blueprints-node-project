@@ -1,7 +1,7 @@
-@import '../../../src/shared/utils/typo/css/typo';
+@import '../../../src/shared/utils/spacing/css/spacing';
 
 .p-common {
-  h1 {
-    @include typo('title');
+  &__block {
+    @include spacing-v('m', 'fix')
   }
 }

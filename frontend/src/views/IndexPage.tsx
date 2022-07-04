@@ -9,6 +9,8 @@
 import React from 'react';
 import modifierState from '../utils/helpers/modifierState';
 import TestTypo from '../components/molecules/test-typo/TestTypo';
+import ColorsTable from '../components/molecules/colors-table/ColorsTable';
+import './css/common.scss';
 
 const IndexPage = () => {
   const componentName = 'p-common';
@@ -16,7 +18,12 @@ const IndexPage = () => {
 
   return (
     <div className={cssClasses}>
-      <TestTypo title="First Page" />
+      <div className="p-common__block">
+        <TestTypo title="First Page" />
+      </div>
+      <div className="p-common__block">
+        <ColorsTable />
+      </div>
     </div>
   );
 };
