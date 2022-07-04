@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "generate": "npm run build && npm run sprites",
+    "sprites": "rimraf src/shared/assets/svg/icons.svg && gulp svg-sprites"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,11 @@
     ]
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "merge-stream": "^2.0.0",
     "sass": "^1.53.0"
   }
 }

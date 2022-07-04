@@ -1,0 +1,10 @@
+.a-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+@import './modifier/fit-parent';
+@import './modifier/colors';

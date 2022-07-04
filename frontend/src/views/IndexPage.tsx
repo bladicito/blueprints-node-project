@@ -11,6 +11,7 @@ import modifierState from '../utils/helpers/modifierState';
 import TestTypo from '../components/molecules/test-typo/TestTypo';
 import ColorsTable from '../components/molecules/colors-table/ColorsTable';
 import './css/common.scss';
+import IconsTable from '../components/molecules/icons-table/IconsTable';
 
 const IndexPage = () => {
   const componentName = 'p-common';
@@ -23,6 +24,9 @@ const IndexPage = () => {
       </div>
       <div className="p-common__block">
         <ColorsTable />
+      </div>
+      <div className="p-common__block">
+        <IconsTable />
       </div>
     </div>
   );

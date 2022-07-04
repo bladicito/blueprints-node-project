@@ -10,9 +10,9 @@ import React from 'react';
 import modifierState from '../../../utils/helpers/modifierState';
 import './css/colors-table.scss';
 
-interface IProps {}
+// interface IProps {}
 
-const ColorsTable = ({}: IProps) => {
+const ColorsTable = () => {
   const componentName = 'm-colors-table';
   const cssClasses = modifierState(componentName, [], []);
 
