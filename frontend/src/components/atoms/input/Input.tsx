@@ -19,7 +19,6 @@ const Input = ({
   const componentName = 'a-input';
 
   const cssClasses = modifierState(componentName, modifier, state);
-
   return (
     <input
       accept={accept}
