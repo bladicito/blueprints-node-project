@@ -1,0 +1,14 @@
+@import '../../../../shared/utils/colors/css/colors';
+
+.a-button--danger {
+  background-color: $color-red-vader-saber;
+  color: $color-white-stormtrooper;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    color: $color-white-stormtrooper;
+    background-color: lighten($color-red-vader-saber, 10%);
+  }
+}

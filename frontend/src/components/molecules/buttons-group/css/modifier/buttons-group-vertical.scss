@@ -1,0 +1,8 @@
+.m-buttons-group--vertical {
+  .m-buttons-group {
+    &__buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

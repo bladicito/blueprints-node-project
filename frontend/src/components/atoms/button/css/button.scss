@@ -1,0 +1,68 @@
+@import '../../../../../src/shared/utils/animations/css/animations';
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/spacing/css/spacing';
+
+.a-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  @include padding-top('xxs', 'fix');
+  @include padding-right('xs', 'fix');
+  @include padding-bottom('xxs', 'fix');
+  @include padding-left('xs', 'fix');
+  @include typo('body-1');
+  border: 0;
+  border-radius: 5px;
+  background-color: $color-blue-anakin-saber;
+  color: $color-white-stormtrooper;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color $animate-x-fast ease,
+              color $animate-x-fast ease;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    background-color: darken($color-blue-anakin-saber, 10%);
+  }
+
+  &:disabled {
+    border-color: rgba($color-blue-anakin-saber, 0.4);
+    background-color: rgba($color-blue-anakin-saber, 0.4);
+    color: rgba($color-blue-anakin-saber, 0.6);
+    cursor: not-allowed;
+  }
+
+  &__additional-information {
+    @include typo('body-4');
+    @include padding-top('xxs', 'fix');
+  }
+
+  &--multiline {
+    flex-direction: column;
+    padding-top: 2px;
+    @include padding-right('xs', 'fix');
+    padding-bottom: 2px;
+    @include padding-left('xs', 'fix');
+    @include typo('body-3');
+  }
+}
+
+@import './danger';
+@import './warning';
+@import './success';
+@import './link';
+@import './secondary';
+@import './transparent';
+@import './bordered';
+@import './modifier/fit-parent';
+@import './modifier/font-inherit';
+@import './modifier/icon';
+@import './modifier/icon-only';
+@import './modifier/site-title';
+@import './modifier/action-on-picture';

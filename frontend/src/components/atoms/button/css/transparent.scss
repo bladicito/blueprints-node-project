@@ -1,0 +1,22 @@
+@import 'src/shared/utils/colors/css/colors';
+
+.a-button--transparent {
+  background-color: transparent;
+  color: $color-gray-rat;
+  padding: 0;
+
+  &.a-button {
+    &:focus,
+    &:hover,
+    &:hover:not([disabled]),
+    &:active {
+      background-color: transparent;
+      color: $color-gray-matter;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $color-gray-anatomy;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.m-buttons-group--right-aligned {
+  .m-buttons-group {
+    &__buttons {
+      justify-content: flex-end;
+    }
+  }
+}
+

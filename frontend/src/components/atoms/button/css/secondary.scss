@@ -1,0 +1,14 @@
+@import '../../../../shared/utils/colors/css/colors';
+
+.a-button--secondary {
+  background-color: $color-purple-windu-light-saber;
+  color: $color-white-stormtrooper;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    color: $color-white-stormtrooper;
+    background-color: lighten($color-purple-windu-light-saber, 10%);
+  }
+}

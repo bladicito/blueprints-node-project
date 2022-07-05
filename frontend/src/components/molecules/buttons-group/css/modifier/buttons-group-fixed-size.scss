@@ -1,0 +1,14 @@
+@import '../../../../../../src/shared/utils/breakpoints/css/breakpoints';
+
+.m-buttons-group--fixed-size {
+  .m-buttons-group {
+    &__button {
+      min-width: 0;
+      margin-bottom: 0;
+
+      @media($bp-ul) {
+        min-width: 90px;
+      }
+    }
+  }
+}

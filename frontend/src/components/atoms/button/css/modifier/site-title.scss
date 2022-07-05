@@ -1,0 +1,6 @@
+@import '../../../../../shared/utils/typo/css/typo';
+
+.a-button--site-title {
+  @include typo('title');
+  color: inherit;
+}

@@ -1,0 +1,14 @@
+@import '../../../../shared/utils/colors/css/colors';
+
+.a-button--success {
+  background-color: $color-green-yoda;
+  color: $color-white-stormtrooper;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    color: $color-white-stormtrooper;
+    background-color: lighten($color-green-yoda, 10%);
+  }
+}

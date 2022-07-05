@@ -1,0 +1,14 @@
+@import '../../../../shared/utils/colors/css/colors';
+
+.a-button--warning {
+  background-color: $color-orange-rebellion;
+  color: $color-white-stormtrooper;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    color: $color-white-stormtrooper;
+    background-color: lighten($color-orange-rebellion, 10%);
+  }
+}

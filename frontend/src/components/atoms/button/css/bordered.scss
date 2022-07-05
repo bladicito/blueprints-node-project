@@ -1,0 +1,22 @@
+@import 'src/shared/utils/colors/css/colors';
+
+.a-button--bordered {
+  color: $color-gray-3;
+  background-color: transparent;
+  border:1px solid currentColor;
+
+  &:hover:not([disabled]),
+  &:focus,
+  &:active:not([disabled]),
+  &.state-a-button--active {
+    color: $color-gray-1;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $color-gray-matter;
+    border-color: $color-gray-matter;
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+}

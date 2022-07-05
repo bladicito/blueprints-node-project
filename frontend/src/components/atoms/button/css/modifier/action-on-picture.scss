@@ -1,0 +1,24 @@
+@import "../../../../../../src/shared/utils/colors/css/colors";
+@import '../../../../../../src/shared/utils/spacing/css/spacing';
+
+.a-button--action-on-picture {
+  padding: 8px;
+  background-color: rgba($color-black-vader, 0.4);
+  color: $color-white-stormtrooper;
+  font-weight: 500;
+
+  &.a-button:hover,
+  &.a-button:focus,
+  &.a-button:active {
+    background-color: rgba($color-black-vader, 0.8);
+    color: $color-gray-anatomy;
+  }
+
+  .a-button {
+    &__icon {
+      width: 20px;
+      height: 20px;
+      margin-top: -1px;
+    }
+  }
+}

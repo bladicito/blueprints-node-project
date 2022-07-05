@@ -1,0 +1,44 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+
+.a-button--link {
+  @include typo('body');
+  min-width: 0;
+  padding: 0;
+  background-color: transparent;
+  color: $color-green-jarjarbinks;
+
+  &:hover,
+  &:hover:not([disabled]),
+  &:focus,
+  &:active {
+    background-color: transparent;
+    color: darken($color-green-jarjarbinks, 10%);
+  }
+
+  .a-button {
+    &__icon-text {
+      @include typo('body');
+    }
+  }
+}
+
+.a-button--back {
+  &.a-button {
+    background-color: transparent;
+    color: $color-gray-rat;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: darken($color-gray-rat, 10%) !important;
+    }
+
+    .a-button {
+      &__icon-text {
+        @include typo('body-1');
+      }
+    }
+  }
+}

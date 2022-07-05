@@ -1,0 +1,86 @@
+@import '../../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../../src/shared/utils/spacing/css/spacing';
+@import '../../../../../../src/shared/utils/typo/css/typo';
+
+.a-button--icon {
+  .a-button {
+    &__icon-text {
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__icon-text {
+      @include typo('body-4');
+    }
+  }
+}
+
+.a-button--icon-text-large {
+  @extend .a-button--icon;
+  .a-button {
+    &__icon-text {
+      @include typo('title-3');
+    }
+  }
+}
+
+.a-button--icon-left {
+  .a-button {
+    &__icon {
+      @include margin-right('xxs', 'fix');
+    }
+
+    &__text {
+      @include margin-right('xxs', 'fix');
+    }
+  }
+}
+
+.a-button--icon-right {
+  .a-button {
+    &__icon {
+      @include margin-left('xxs', 'fix');
+    }
+
+    &__text {
+      @include margin-left('xxs', 'fix');
+    }
+  }
+}
+
+.a-button--icon-top {
+  .a-button {
+    &__icon-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 15px;
+      height: 15px;
+      @include margin-bottom('xxs', 'fix');
+    }
+  }
+}
+
+.a-button--icon-bottom {
+  .a-button {
+    &__icon-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 15px;
+      height: 15px;
+      @include margin-bottom('xxs', 'fix');
+    }
+  }
+}

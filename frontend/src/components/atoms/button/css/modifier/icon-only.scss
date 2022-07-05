@@ -1,0 +1,17 @@
+.a-button--icon-only {
+  position: relative;
+  height: inherit;
+  width: inherit;
+
+  .a-button {
+    &__icon {
+      height: inherit;
+      width: inherit;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-right: 0;
+    }
+  }
+}

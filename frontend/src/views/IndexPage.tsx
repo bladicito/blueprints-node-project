@@ -12,6 +12,7 @@ import TestTypo from '../components/molecules/test-typo/TestTypo';
 import ColorsTable from '../components/molecules/colors-table/ColorsTable';
 import './css/common.scss';
 import IconsTable from '../components/molecules/icons-table/IconsTable';
+import ButtonsCollection from '../components/molecules/buttons-collection/ButtonsCollection';
 
 const IndexPage = () => {
   const componentName = 'p-common';
@@ -19,14 +20,19 @@ const IndexPage = () => {
 
   return (
     <div className={cssClasses}>
-      <div className="p-common__block">
-        <TestTypo title="First Page" />
-      </div>
-      <div className="p-common__block">
-        <ColorsTable />
-      </div>
-      <div className="p-common__block">
-        <IconsTable />
+      <div className="row">
+        <div className="col-12 col-lg-6">
+          <TestTypo title="First Page" />
+        </div>
+        <div className="col-12 col-lg-6">
+          <ColorsTable />
+        </div>
+        <div className="col-12 col-lg-6">
+          <IconsTable />
+        </div>
+        <div className="col-12 col-lg-6">
+          <ButtonsCollection />
+        </div>
       </div>
     </div>
   );

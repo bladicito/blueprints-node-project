@@ -1,0 +1,29 @@
+@import '../../../../../src/shared/utils/spacing/css/spacing';
+
+.m-buttons-group {
+  width: 100%;
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  &__button {
+    display: flex;
+    @include margin-bottom('xxs', 'fix');
+    @include padding-right('xs', 'fix');
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@import './modifier/buttons-group-vertical';
+@import './modifier/buttons-group-centered';
+@import './modifier/buttons-group-right-aligned';
+@import './modifier/buttons-group-fixed-size';
