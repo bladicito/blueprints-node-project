@@ -1,6 +1,6 @@
 import { EAutoCompleteInput, EFileAccept, EInputTypes } from '../enums/Input.enum';
 
-export interface EInputHtmlInterface {
+export interface IHtmlInputInterface {
   disabled: boolean;
   id: string;
   modifier: Array<string>;

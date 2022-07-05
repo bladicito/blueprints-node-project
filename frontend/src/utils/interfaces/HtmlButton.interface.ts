@@ -1,4 +1,3 @@
-import React from 'react';
 import { EButtonIconPosition, EButtonKinds } from '../enums/Button.enum';
 import { EIcon } from '../enums/Icons.enum';
 

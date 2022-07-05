@@ -1,8 +1,8 @@
 import React from 'react';
-import { EInputHtmlInterface, IFileInformation } from '../../../utils/interfaces/InputHtml.interface';
 import { EInputTypes } from '../../../utils/enums/Input.enum';
 import modifierState from '../../../utils/helpers/modifierState';
 import './css/input.scss';
+import { IFileInformation, IHtmlInputInterface } from '../../../utils/interfaces/HtmlInput.interface';
 
 const Input = ({
   accept,
@@ -15,7 +15,7 @@ const Input = ({
   type = EInputTypes.TEXT,
   value,
   autocompleteType,
-}: EInputHtmlInterface) => {
+}: IHtmlInputInterface) => {
   const componentName = 'a-input';
 
   const cssClasses = modifierState(componentName, modifier, state);
