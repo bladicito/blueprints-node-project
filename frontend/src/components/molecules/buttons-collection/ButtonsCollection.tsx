@@ -11,7 +11,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import Button, { EButtonModifiers } from '../../atoms/button/Button';
 import ButtonsGroup from '../buttons-group/ButtonsGroup';
 import { EIcon } from '../../../utils/enums/Icons.enum';
-import { EButtonIconPosition } from '../../../utils/enums/Button.enum';
+import { EButtonIconPosition, EButtonKinds } from '../../../utils/enums/Button.enum';
 
 const ButtonsCollection = () => {
   const componentName = 'm-buttons-collection';
@@ -32,11 +32,7 @@ const ButtonsCollection = () => {
         <Button text="With Icon right" icon={EIcon.CHEVRON_RIGHT} iconPosition={EButtonIconPosition.RIGHT} />
         <Button text="With Icon top" icon={EIcon.CHEVRON_UP} iconPosition={EButtonIconPosition.TOP} />
         <Button text="With Icon bottom" icon={EIcon.CHEVRON_DOWN} iconPosition={EButtonIconPosition.BOTTOM} />
-        <Button
-          additionalInformation="Additional info"
-          text="With Icon right"
-          iconPosition={EButtonIconPosition.RIGHT}
-        />
+        <Button additionalInformation="Additional info" text="With " iconPosition={EButtonIconPosition.RIGHT} />
       </ButtonsGroup>
       <div style={{ marginBottom: 10 }}>
         <Button modifier={[EButtonModifiers.FIT_PARENT]} text="Fit Parent" />
@@ -46,9 +42,19 @@ const ButtonsCollection = () => {
           modifier={[EButtonModifiers.FIT_PARENT]}
           additionalInformation="Additional info"
           text="Fit Parent with additional text"
-          iconPosition={EButtonIconPosition.RIGHT}
         />
       </div>
+      <ButtonsGroup>
+        <Button text="Simple Link" kind={EButtonKinds.LINK} icon={EIcon.CHEVRON_LEFT} />
+        <Button text="Simple link 2" kind={EButtonKinds.LINK} />
+        <Button
+          toolTip="With tooltip native"
+          text="Simple Link"
+          kind={EButtonKinds.LINK}
+          icon={EIcon.CHEVRON_RIGHT}
+          iconPosition={EButtonIconPosition.RIGHT}
+        />
+      </ButtonsGroup>
     </div>
   );
 };

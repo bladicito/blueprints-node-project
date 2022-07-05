@@ -1,5 +1,5 @@
 import React from 'react';
-import { EButtonIconPosition, EButtonTypes } from '../enums/Button.enum';
+import { EButtonIconPosition, EButtonKinds } from '../enums/Button.enum';
 import { EIcon } from '../enums/Icons.enum';
 
 export interface IHtmlButton {
@@ -10,7 +10,7 @@ export interface IHtmlButton {
   disabled?: boolean;
   href?: string;
   isExternalLink?: boolean | null;
-  kind?: EButtonTypes;
+  kind?: EButtonKinds;
   modifier?: Array<string>;
   state?: Array<string> | null;
   text?: string;

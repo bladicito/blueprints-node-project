@@ -1,4 +1,4 @@
-export enum EButtonTypes {
+export enum EButtonKinds {
   LINK = 'link',
   BUTTON = 'button',
   LINK_REACT_ROUTER = 'link-react-router',

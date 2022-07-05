@@ -3,7 +3,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import './css/button.scss';
 import { IHtmlButton } from '../../../utils/interfaces/HtmlButton.interface';
 import { Link } from 'react-router-dom';
-import { EButtonIconPosition, EButtonTypes } from '../../../utils/enums/Button.enum';
+import { EButtonIconPosition, EButtonKinds } from '../../../utils/enums/Button.enum';
 import Icon, { EIConModifiers } from '../icon/Icon';
 
 // import { v4 as uuidv4 } from 'uuid';
@@ -37,7 +37,7 @@ const Button = ({
   disabled,
   href,
   isExternalLink,
-  kind = EButtonTypes.BUTTON,
+  kind = EButtonKinds.BUTTON,
   modifier = [],
   state,
   text,
@@ -112,7 +112,7 @@ const Button = ({
     } else return null;
   }, [additionalInformation]);
 
-  if (kind === EButtonTypes.LINK) {
+  if (kind === EButtonKinds.LINK) {
     if (isExternalLink) {
       return (
         <a
@@ -136,12 +136,12 @@ const Button = ({
     } else {
       return (
         <a className={`${cssClasses} a-button--link`} href={href} title={toolTip ? toolTip : ''}>
-          {text}
+          {internMarkup}
           {additionalInformationHtml}
         </a>
       );
     }
-  } else if (kind === EButtonTypes.COPY_TO_CLIPBOARD) {
+  } else if (kind === EButtonKinds.COPY_TO_CLIPBOARD) {
     // maybe we need to use an uuid for selector. normally values to be copied are already uuids
     return (
       <button
@@ -190,7 +190,7 @@ const Button = ({
         {additionalInformationHtml}
       </button>
     );
-  } else if (kind === EButtonTypes.LINK_REACT_ROUTER) {
+  } else if (kind === EButtonKinds.LINK_REACT_ROUTER) {
     return (
       // todo fix href should not be undefined
       <Link className={`${cssClasses}`} to={href ? href : '/'} title={toolTip ? toolTip : ''}>
