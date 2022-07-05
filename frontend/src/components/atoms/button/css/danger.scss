@@ -9,6 +9,6 @@
   &:active:not([disabled]),
   &.state-a-button--active {
     color: $color-white-stormtrooper;
-    background-color: lighten($color-red-vader-saber, 10%);
+    background-color: darken($color-red-vader-saber, 10%);
   }
 }

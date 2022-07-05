@@ -13,8 +13,6 @@ import ButtonsGroup from '../buttons-group/ButtonsGroup';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EButtonIconPosition } from '../../../utils/enums/Button.enum';
 
-// interface IProps {}
-
 const ButtonsCollection = () => {
   const componentName = 'm-buttons-collection';
   const cssClasses = modifierState(componentName, [], []);
@@ -40,8 +38,16 @@ const ButtonsCollection = () => {
           iconPosition={EButtonIconPosition.RIGHT}
         />
       </ButtonsGroup>
-      <div>
+      <div style={{ marginBottom: 10 }}>
         <Button modifier={[EButtonModifiers.FIT_PARENT]} text="Fit Parent" />
+      </div>
+      <div style={{ marginBottom: 10 }}>
+        <Button
+          modifier={[EButtonModifiers.FIT_PARENT]}
+          additionalInformation="Additional info"
+          text="Fit Parent with additional text"
+          iconPosition={EButtonIconPosition.RIGHT}
+        />
       </div>
     </div>
   );

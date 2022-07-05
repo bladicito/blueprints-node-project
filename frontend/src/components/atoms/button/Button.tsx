@@ -50,6 +50,25 @@ const Button = ({
   copyToClipboardMessage,
 }: IHtmlButton) => {
   const componentName = 'a-button';
+  const internMarkup = useMemo(() => {
+    if (!icon) {
+      return <span className="a-button__text">{text}</span>;
+    } else {
+      const iconMarkup = <Icon type={icon} modifier={[EIConModifiers.FIT_PARENT]} />;
+      const iconLeftOrTop = iconPosition === EButtonIconPosition.LEFT || iconPosition === EButtonIconPosition.TOP;
+      const iconRightOrBottom =
+        iconPosition === EButtonIconPosition.RIGHT || iconPosition === EButtonIconPosition.BOTTOM;
+
+      return (
+        <span className="a-button__icon-text">
+          {iconLeftOrTop && <span className="a-button__icon">{iconMarkup}</span>}
+          <span className="a-button__text">{text}</span>
+          {iconRightOrBottom && <span className="a-button__icon">{iconMarkup}</span>}
+        </span>
+      );
+    }
+  }, [icon, iconPosition, text]);
+
   const cssClasses = useMemo(() => {
     if (icon) {
       if (!modifier.includes(EButtonModifiers.ICON) && !modifier.includes(EButtonModifiers.ICON_TEXT_LARGE)) {
@@ -110,30 +129,15 @@ const Button = ({
               : () => {}
           }
         >
-          {(() => {
-            if (icon) {
-              const iconMarkup = <Icon type={icon} modifier={[EIConModifiers.FIT_PARENT]} />;
-              if (iconOnly) {
-                return <span className="a-button__icon">{iconMarkup}</span>;
-              } else {
-                return (
-                  <span className="a-button__icon-text">
-                    {iconPosition === 'left' && <span className="a-button__icon">{iconMarkup}</span>}
-                    <span className="a-button__text">{text}</span>
-                    {iconPosition === 'right' && <span className="a-button__icon">{iconMarkup}</span>}
-                  </span>
-                );
-              }
-            } else {
-              return <span className="a-button__text">{text}</span>;
-            }
-          })()}
+          {internMarkup}
+          {additionalInformationHtml}
         </a>
       );
     } else {
       return (
         <a className={`${cssClasses} a-button--link`} href={href} title={toolTip ? toolTip : ''}>
           {text}
+          {additionalInformationHtml}
         </a>
       );
     }
@@ -182,25 +186,7 @@ const Button = ({
           }
         }}
       >
-        {(() => {
-          if (icon) {
-            const iconMarkup = <Icon type={icon} modifier={[EIConModifiers.FIT_PARENT]} />;
-            if (iconOnly) {
-              return <span className="a-button__icon">{iconMarkup}</span>;
-            } else {
-              return (
-                <span className="a-button__icon-text">
-                  {iconPosition === EButtonIconPosition.LEFT && <span className="a-button__icon">{iconMarkup}</span>}
-                  {iconPosition === EButtonIconPosition.TOP && <span className="a-button__icon">{iconMarkup}</span>}
-                  <span className="a-button__text">{text}</span>
-                  {iconPosition === 'right' && <span className="a-button__icon">{iconMarkup}</span>}
-                </span>
-              );
-            }
-          } else {
-            return <span className="a-button__text">{text}</span>;
-          }
-        })()}
+        {internMarkup}
         {additionalInformationHtml}
       </button>
     );
@@ -208,24 +194,8 @@ const Button = ({
     return (
       // todo fix href should not be undefined
       <Link className={`${cssClasses}`} to={href ? href : '/'} title={toolTip ? toolTip : ''}>
-        {(() => {
-          if (icon) {
-            const iconMarkup = <Icon type={icon} modifier={[EIConModifiers.FIT_PARENT]} />;
-            if (iconOnly) {
-              return <span className="a-button__icon">{iconMarkup}</span>;
-            } else {
-              return (
-                <span className="a-button__icon-text">
-                  {iconPosition === 'left' && <span className="a-button__icon">{iconMarkup}</span>}
-                  <span className="a-button__text">{text}</span>
-                  {iconPosition === 'right' && <span className="a-button__icon">{iconMarkup}</span>}
-                </span>
-              );
-            }
-          } else {
-            return <span className="a-button__text">{text}</span>;
-          }
-        })()}
+        {internMarkup}
+        {additionalInformationHtml}
       </Link>
     );
   } else {
@@ -251,29 +221,7 @@ const Button = ({
           }
         }}
       >
-        {/*TODO DRY*/}
-        {(() => {
-          if (icon) {
-            const iconMarkup = <Icon type={icon} modifier={[EIConModifiers.FIT_PARENT]} />;
-            if (iconOnly) {
-              return <span className="a-button__icon">{iconMarkup}</span>;
-            } else {
-              const iconLeftOrTop =
-                iconPosition === EButtonIconPosition.LEFT || iconPosition === EButtonIconPosition.TOP;
-              const iconRightOrBottom =
-                iconPosition === EButtonIconPosition.RIGHT || iconPosition === EButtonIconPosition.BOTTOM;
-              return (
-                <span className="a-button__icon-text">
-                  {iconLeftOrTop && <span className="a-button__icon">{iconMarkup}</span>}
-                  <span className="a-button__text">{text}</span>
-                  {iconRightOrBottom && <span className="a-button__icon">{iconMarkup}</span>}
-                </span>
-              );
-            }
-          } else {
-            return <span className="a-button__text">{text}</span>;
-          }
-        })()}
+        {internMarkup}
         {additionalInformationHtml}
       </button>
     );
