@@ -1,0 +1,13 @@
+.a-image {
+  position: relative;
+  display: block;
+
+  img,
+  &__image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-position: center right;
+    object-fit: cover;
+  }
+}
