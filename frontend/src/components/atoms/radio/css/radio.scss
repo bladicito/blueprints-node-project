@@ -1,0 +1,31 @@
+@import '../../../../../src/shared/utils/radio/css/radio';
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+
+$checkbox-button-size: 16px;
+
+.a-radio {
+  @include typo('body-4');
+  white-space: nowrap;
+  position: relative;
+  color: $color-purple-windu-saber;
+  height: $checkbox-button-size + 4;
+
+  @include radioGenerator($checkbox-button-size);
+
+  &__input:disabled {
+    & + .a-radio__label::before,
+    & + .a-radio__label::after,
+    & + .a-radio__label {
+      color: $color-gray-disabled;
+    }
+  }
+}
+
+@import 'src/components/atoms/radio/css/modifier/blue';
+@import 'src/components/atoms/radio/css/modifier/gray';
+@import 'src/components/atoms/radio/css/modifier/green';
+@import 'src/components/atoms/radio/css/modifier/orange';
+@import 'src/components/atoms/radio/css/modifier/red';
+@import 'src/components/atoms/radio/css/modifier/yellow';
+@import 'src/components/atoms/radio/css/modifier/list';

@@ -1,0 +1,58 @@
+@import '../../../../../../src/shared/utils/animations/css/animations';
+@import '../../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../../src/shared/utils/spacing/css/spacing';
+@import '../../../../../../src/shared/utils/typo/css/typo';
+
+.a-radio--list {
+  @include typo('body-1');
+
+  .a-radio {
+    &__input {
+      &:hover {
+        + .a-radio {
+          &__label {
+            background-color: lighten($color-purple-windu-saber, 30%);
+          }
+        }
+      }
+
+      &:checked {
+        + .a-radio {
+          &__label {
+            background-color: $color-purple-windu-saber;
+
+            &::after {
+              content: none;
+            }
+
+            &::before {
+              content: none;
+            }
+
+            .a-radio__label-text {
+              color: $color-white-stormtrooper;
+            }
+          }
+        }
+      }
+    }
+
+    &__label {
+      min-height: 0;
+      padding: 5px 4px;
+      transition: background-color $animate-xx-fast ease;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__label-text {
+      color: $color-black-vader;
+    }
+  }
+
+  &.a-radio--highlight {
+    background-color: $color-green-jabba;
+  }
+}

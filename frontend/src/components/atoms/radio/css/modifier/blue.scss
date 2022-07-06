@@ -1,0 +1,9 @@
+@import '../../../../../../src/shared/utils/colors/css/colors';
+
+.a-radio--blue {
+  color: $color-blue-r2d2-lines;
+
+  &:hover {
+    color: darken($color-blue-r2d2-lines, 10%);
+  }
+}

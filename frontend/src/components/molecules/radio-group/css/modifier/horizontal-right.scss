@@ -1,0 +1,19 @@
+@import '../modifier/horizontal';
+
+.m-radio-group--horizontal-right {
+  @extend .m-radio-group--horizontal;
+
+  .m-radio-group {
+    &__label {
+      flex: initial;
+    }
+
+    &__item {
+      margin-right: 0;
+    }
+
+    &__items {
+      justify-content: end;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/spacing/css/spacing';
+
+.m-radio-group {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  &__label {
+    margin-right: 18px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__item {
+    &:hover {
+      background-color: $color-white-stormtrooper;
+    }
+
+    + .m-radio-group__item {
+      @include margin-top('xs', 'fix');
+    }
+  }
+}
+
+@import './modifier/horizontal';
+@import './modifier/horizontal-right';

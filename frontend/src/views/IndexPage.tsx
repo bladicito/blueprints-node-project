@@ -18,6 +18,8 @@ import { EInputGroupStates, EInputTypes } from '../utils/enums/Input.enum';
 import CheckboxGroup from '../components/molecules/checkbox-group/CheckboxGroup';
 import { ECheckboxGroupModifiers, ECheckboxModifiers } from '../utils/enums/Checkbox.enum';
 import { v4 as uuidv4 } from 'uuid';
+import RadioGroup from '../components/molecules/radio-group/RadioGroup';
+import { ERadioGroupModifiers, ERadioModifiers } from '../utils/enums/Radio.enum';
 
 const IndexPage = () => {
   const componentName = 'p-common';
@@ -103,7 +105,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="col-6">
-          <div className="p-common__block" style={{ marginTop: 30 }}>
+          <h2 style={{ marginTop: 30, marginBottom: 30 }}>Checkboxes</h2>
+          <div className="p-common__block">
             <CheckboxGroup
               modifier={[ECheckboxGroupModifiers.HORIZONTAL]}
               options={[
@@ -300,6 +303,127 @@ const IndexPage = () => {
               ]}
               notifyValueChange={(newData) => {
                 console.log(newData);
+              }}
+            />
+          </div>
+          <h2 style={{ marginTop: 30, marginBottom: 30 }}>Radios</h2>
+          <div className="p-common__block">
+            <RadioGroup
+              modifier={[ERadioGroupModifiers.HORIZONTAL]}
+              options={[
+                {
+                  modifier: [ERadioModifiers.RED],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option one',
+                  disabled: true,
+                },
+                {
+                  modifier: [ERadioModifiers.GRAY],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: true,
+                  label: 'Option 2',
+                },
+                {
+                  modifier: [ERadioModifiers.BLUE],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 3',
+                },
+                {
+                  modifier: [ERadioModifiers.ORANGE],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+                {
+                  modifier: [ERadioModifiers.GREEN],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+                {
+                  modifier: [ERadioModifiers.YELLOW],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+              ]}
+              onRadioSelection={(newData) => {
+                if (newData) {
+                  console.log(newData);
+                }
+              }}
+            />
+          </div>
+          <div className="p-common__block">
+            <RadioGroup
+              options={[
+                {
+                  modifier: [ERadioModifiers.RED],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 1',
+                },
+                {
+                  modifier: [ERadioModifiers.GRAY],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: true,
+                  label: 'Option 2',
+                },
+                {
+                  modifier: [ERadioModifiers.BLUE],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 3',
+                },
+                {
+                  modifier: [ERadioModifiers.ORANGE],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+                {
+                  modifier: [ERadioModifiers.GREEN],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+                {
+                  modifier: [ERadioModifiers.YELLOW],
+                  id: uuidv4(),
+                  value: 'value',
+                  name: uuidv4(),
+                  checked: false,
+                  label: 'Option 4',
+                },
+              ]}
+              onRadioSelection={(newData) => {
+                if (newData) {
+                  console.log(newData);
+                }
               }}
             />
           </div>

@@ -1,0 +1,42 @@
+@import '../../../../../../src/shared/utils/breakpoints/css/breakpoints';
+@import '../../../../../../src/shared/utils/spacing/css/spacing';
+
+.m-radio-group--horizontal {
+  .m-radio-group {
+
+    &__label {
+      flex: 0 0 15%;
+    }
+
+    &__items {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+
+    &__item {
+      border-bottom: none;
+      padding: 0;
+      min-width: 80px;
+      margin-top: 0;
+      @include margin-bottom('xs', 'fix');
+      @include margin-right('xs', 'fix');
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .a-radio__label {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
