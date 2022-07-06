@@ -1,0 +1,18 @@
+@import '../../../utils/colors/css/colors';
+@import '../../../utils/typo/css/typo';
+@import '../../../utils/placeholder/css/placeholder';
+@import '../../../utils/animations/css/animations';
+
+@mixin inputColorGenerator($color) {
+  @include placeholder(lighten($color, 60%));
+  border-bottom: 1px solid $color;
+
+  &:focus {
+    border-color: darken($color, 40%);
+  }
+
+  &.state-a-input--error {
+    @include placeholder(lighten($color, 50%));
+    border-bottom-color: $color;
+  }
+}

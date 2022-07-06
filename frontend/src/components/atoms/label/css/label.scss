@@ -1,0 +1,17 @@
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/colors/css/colors';
+
+.a-label {
+  @include typo('body-4');
+  color: inherit;
+
+  margin-bottom: 0;
+
+  &__mandatory {
+    font-weight: 600;
+  }
+
+  &.state-a-label--error {
+    color: inherit;
+  }
+}

@@ -2,41 +2,33 @@
 @import '../../../../../src/shared/utils/typo/css/typo';
 @import '../../../../../src/shared/utils/placeholder/css/placeholder';
 @import '../../../../../src/shared/utils/animations/css/animations';
+@import '../../../../../src/shared/utils/input/css/input';
 
 .a-input {
-  @include typo('interaction-elements');
-  @include placeholder(lighten($color-death-star-black, 40%));
+  @include typo('body-1');
   width: 100%;
   padding: 4px 8px 3px 0;
   outline: none;
   border: none;
-  border-bottom: 1px solid $color-death-star-black;
+  border-bottom: 1px solid currentColor;
   background-color: transparent;
-  color: inherit;
   transition: all $animate-medium ease;
-
-  &:focus {
-    border-color: $color-plum;
-  }
 
   &:disabled {
     cursor: not-allowed;
-    color: $color-gray-8
+    color: inherit;
   }
 
   &.state-a-input--filled-in {
     border-color: currentColor;
   }
 
-  &.state-a-input--error {
-    @include placeholder(lighten($color-red, 40%));
-    border-bottom-color: $color-red;
-  }
-
   // styles files populated by the browser auto complete
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px $color-green-light-aura inset;
+    -webkit-box-shadow: 0 0 0 1000px $color-green-jabba inset;
   }
+
+  @include inputColorGenerator($color-gray-rat)
 }
 
 @import './modifier/text-small';

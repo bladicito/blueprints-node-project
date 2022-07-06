@@ -15,3 +15,8 @@ export enum EInputTypes {
   TEXT = 'text',
   FILE = 'file',
 }
+
+export enum EInputGroupStates {
+  FILLED_IN = 'filled-in',
+  ERROR = 'error',
+}

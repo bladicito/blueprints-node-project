@@ -8,7 +8,7 @@
 
 import React from 'react';
 import modifierState from '../utils/helpers/modifierState';
-import TestTypo from '../components/molecules/test-typo/TestTypo';
+import TestTypo from '../components/example/test-typo/TestTypo';
 
 const SecondPage = () => {
   const componentName = 'p-common';

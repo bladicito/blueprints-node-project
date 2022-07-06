@@ -9,7 +9,7 @@
 import React from 'react';
 import modifierState from '../../../utils/helpers/modifierState';
 import Button, { EButtonModifiers } from '../../atoms/button/Button';
-import ButtonsGroup from '../buttons-group/ButtonsGroup';
+import ButtonsGroup from '../../molecules/buttons-group/ButtonsGroup';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EButtonIconPosition, EButtonKinds } from '../../../utils/enums/Button.enum';
 

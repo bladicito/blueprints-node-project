@@ -1,0 +1,87 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/animations/css/animations';
+@import '../../../../../src/shared/utils/input/css/input';
+
+.m-input-group {
+  &__message-wrapper {
+    @include typo('body-4');
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__message {
+    @include typo('body-4');
+    transition: opacity $animate-fast ease;
+    margin-bottom: 0;
+
+    &--error {
+      opacity: 0;
+    }
+
+    &--alert {
+      color: $color-orange-rebellion;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    .a-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__label {
+    opacity: 0;
+    transition: opacity $animate-fast ease;
+  }
+
+  &.state-m-input-group--empty {
+    .m-input-group__label {
+      opacity: 0;
+    }
+  }
+
+  &.state-m-input-group--filled-in {
+    .m-input-group__label {
+      opacity: 1;
+    }
+  }
+
+  &.state-m-input-group--error {
+    color: $color-red-vader-saber;
+
+    .a-input {
+      @include inputColorGenerator($color-red-vader-saber);
+    }
+
+    .m-input-group__label {
+      opacity: 1;
+    }
+
+    .m-input-group__message--error {
+      opacity: 1;
+    }
+  }
+
+  &.state-m-input-group--disabled:not(.state-m-input-group--error) {
+    color: $color-gray-hair-line;
+
+    .a-input {
+      @include inputColorGenerator($color-gray-hair-line);
+    }
+
+    .m-input-group__label {
+      opacity: 1;
+    }
+
+    .m-input-group__message--error {
+      opacity: 1;
+    }
+  }
+}
