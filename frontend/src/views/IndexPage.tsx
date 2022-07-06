@@ -64,6 +64,7 @@ const IndexPage = () => {
             <InputGroup
               state={[EInputGroupStates.FILLED_IN]}
               errorMessage="Cannot be empty"
+              alertMessage="Cannot be empty alert"
               placeholder="Dummy Text"
               label="Dummy Text"
               type={EInputTypes.TEXT}
@@ -88,6 +89,7 @@ const IndexPage = () => {
             <InputGroup
               state={[EInputGroupStates.ERROR]}
               errorMessage="The provided value is wrong"
+              alertMessage="Cannot be empty alert"
               placeholder="Dummy Text"
               label="Dummy Text"
               type={EInputTypes.TEXT}

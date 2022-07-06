@@ -3,7 +3,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import Label from '../../atoms/label/Label';
 import Input from '../../atoms/input/Input';
 import './css/input-group.scss';
-import Icon from '../../atoms/icon/Icon';
+import Icon, { EIConModifiers } from '../../atoms/icon/Icon';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EInputTypes } from '../../../utils/enums/Input.enum';
 import { IInputGroupInterface } from '../../../utils/interfaces/InputGroup.interface';
@@ -64,8 +64,9 @@ const InputGroup = ({
           {actionButton && actionButton}
           {alertMessage && (
             <p className="m-input-group__message m-input-group__message--alert">
-              <Icon type={EIcon.MEME} modifier={[]} state={[]} />
-              {alertMessage}
+              <Icon type={EIcon.WARNING} />
+              &nbsp;
+              <span>{alertMessage}</span>
             </p>
           )}
           {errorMessage && <p className="m-input-group__message m-input-group__message--error">{errorMessage}</p>}

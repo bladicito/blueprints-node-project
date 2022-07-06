@@ -6,4 +6,5 @@ export enum EIcon {
   EDIT = 'edit',
   LOCKED = 'locked',
   MEME = 'meme',
+  WARNING = 'warning',
 }

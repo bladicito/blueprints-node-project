@@ -21,7 +21,8 @@
     }
 
     &--alert {
-      color: $color-orange-rebellion;
+      display: flex;
+      align-items: center;
     }
   }
 
