@@ -3,7 +3,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import Label from '../../atoms/label/Label';
 import Input from '../../atoms/input/Input';
 import './css/input-group.scss';
-import Icon, { EIConModifiers } from '../../atoms/icon/Icon';
+import Icon from '../../atoms/icon/Icon';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EInputTypes } from '../../../utils/enums/Input.enum';
 import { IInputGroupInterface } from '../../../utils/interfaces/InputGroup.interface';

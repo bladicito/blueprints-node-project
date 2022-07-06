@@ -1,0 +1,9 @@
+@import '../../../../../../src/shared/utils/colors/css/colors';
+
+.a-checkbox--orange {
+  color: $color-orange-rebellion-dark;
+
+  &:hover {
+    color: darken($color-orange-rebellion-dark, 10%);
+  }
+}

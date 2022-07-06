@@ -29,7 +29,12 @@ const ButtonsCollection = () => {
       </ButtonsGroup>
       <ButtonsGroup>
         <Button text="With Icon Left (default)" icon={EIcon.CHEVRON_LEFT} />
-        <Button text="With Icon right" icon={EIcon.CHEVRON_RIGHT} iconPosition={EButtonIconPosition.RIGHT} />
+        <Button
+          text="With Icon right with large text"
+          icon={EIcon.CHEVRON_RIGHT}
+          iconPosition={EButtonIconPosition.RIGHT}
+          modifier={[EButtonModifiers.ICON_TEXT_LARGE]}
+        />
         <Button text="With Icon top" icon={EIcon.CHEVRON_UP} iconPosition={EButtonIconPosition.TOP} />
         <Button text="With Icon bottom" icon={EIcon.CHEVRON_DOWN} iconPosition={EButtonIconPosition.BOTTOM} />
         <Button additionalInformation="Additional info" text="With " iconPosition={EButtonIconPosition.RIGHT} />

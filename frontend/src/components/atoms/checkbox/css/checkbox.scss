@@ -1,0 +1,27 @@
+@import '../../../../../src/shared/utils/animations/css/animations';
+@import '../../../../../src/shared/utils/checkbox/css/checkbox';
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/spacing/css/spacing';
+
+$checkbox-button-size: 16px;
+
+.a-checkbox {
+  @include typo('body-4');
+  white-space: nowrap;
+  position: relative;
+  color: $color-purple-windu-saber; //default
+  transition: color $animate-fast ease;
+  height: $checkbox-button-size + 4;
+  display: flex;
+  align-items: center;
+
+  @include checkboxGenerator($checkbox-button-size);
+}
+
+@import 'src/components/atoms/checkbox/css/modifier/blue';
+@import 'src/components/atoms/checkbox/css/modifier/gray';
+@import 'src/components/atoms/checkbox/css/modifier/green';
+@import 'src/components/atoms/checkbox/css/modifier/orange';
+@import 'src/components/atoms/checkbox/css/modifier/red';
+@import 'src/components/atoms/checkbox/css/modifier/yellow';

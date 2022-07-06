@@ -1,0 +1,9 @@
+@import '../../../../../../src/shared/utils/colors/css/colors';
+
+.a-checkbox--green {
+  color: $color-green-baby-yoda;
+
+  &:hover {
+    color: darken($color-green-baby-yoda, 10%);
+  }
+}

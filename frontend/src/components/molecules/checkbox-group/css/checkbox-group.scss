@@ -1,0 +1,15 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+
+.m-checkbox-group {
+  &__item {
+    &:hover {
+      background-color: $color-white-stormtrooper;
+    }
+
+    + .m-checkbox-group__item {
+      margin-top: 1px;
+    }
+  }
+}
+
+@import './modifier/horizontal';

@@ -9,13 +9,12 @@
     &:checked + .a-checkbox__label::after {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: $size/ 8;
+      left: $size/ 8;
       width: $size - 8px;
       height: $size - 8px;
-      margin-top: 4px;
-      margin-left: 4px;
-      border: 3px solid currentColor;
+      margin: $size/ 8;
+      border: 2px solid currentColor;
       background-color: currentColor;
     }
 
@@ -27,7 +26,7 @@
       width: $size;
       height: $size;
       border: 2px solid currentColor;
-      background-color: $color-stormtrooper-white;
+      background-color: $color-white-stormtrooper;
     }
   }
 
@@ -37,7 +36,7 @@
     width: 100%;
     min-height: $size;
     margin-bottom: 0;
-    padding-left: $size + 4px;
+    padding-left: $size + 8px;
     text-transform: none;
     white-space: normal;
     cursor: pointer;

@@ -1,0 +1,9 @@
+@import '../../../../../../src/shared/utils/colors/css/colors';
+
+.a-checkbox--red {
+  color: $color-red-darth-maul;
+
+  &:hover {
+    color: darken($color-red-darth-maul, 10%);
+  }
+}
