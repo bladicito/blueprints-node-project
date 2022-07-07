@@ -10,7 +10,7 @@ DO NOT EJECT THE PROJECT (Task removed from the package.json of the frontend).
 
 Start the frontend in development Mode on http://localhost:8080
 ```
-cd src/frontend && npm run dev
+cd src/frontend && npm start
 ```
 The frontend will be served on http://localhost:3000 - you can start developing.
  
