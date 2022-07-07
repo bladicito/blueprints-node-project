@@ -104,7 +104,7 @@ const IndexPage = () => {
             />
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           <h2 style={{ marginTop: 30, marginBottom: 30 }}>Checkboxes</h2>
           <div className="p-common__block">
             <CheckboxGroup
