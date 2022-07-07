@@ -26,10 +26,8 @@ server.addHook('onRequest', (req, rep, next) => {
 server.register(appRoutes);
 
 server.register((instance, opts, next) => {
-  const isCompiled = process.env.TARGET === 'compiled';
-  const levelUp = isCompiled ? '../../..' : '../..';
   instance.register(fastifyStatic, {
-    root: path.join(__dirname, levelUp, 'frontend', 'build'),
+    root: path.join(__dirname, '../', 'frontend', 'build'),
   });
 
   // fastify-static add the method sendFile

@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../../../../src/shared/utils/colors/css/colors';
 @import '../../../../../src/shared/utils/visually-hidden/css/visually-hidden';
 
@@ -9,11 +10,11 @@
     &:checked + .a-checkbox__label::after {
       content: '';
       position: absolute;
-      top: $size/ 8;
-      left: $size/ 8;
+      top: math.div($size, 8);
+      left: math.div($size, 8);
       width: $size - 8px;
       height: $size - 8px;
-      margin: $size/ 8;
+      margin: math.div($size, 8);
       border: 2px solid currentColor;
       background-color: currentColor;
     }

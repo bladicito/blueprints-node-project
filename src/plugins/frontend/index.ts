@@ -1,7 +1,5 @@
 import { FastifyError, FastifyInstance, FastifyPluginCallback, FastifyPluginOptions } from 'fastify';
 import fastifyPlugin from 'fastify-plugin';
-import path from 'path';
-import fastifyStatic from '@fastify/static';
 
 const pluginCallbackFrontend: FastifyPluginCallback = (
   fastify: FastifyInstance,
