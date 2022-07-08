@@ -79,8 +79,8 @@ public/assets/*
 public/react-app
 !public/react-app/read.md
 
-build/*
-!build/.gitkeep
+dist/*
+!dist/.gitkeep
 
 #temporal directory for upload files
 tmp-images
