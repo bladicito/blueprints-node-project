@@ -11,7 +11,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import Button, { EButtonModifiers } from '../../atoms/button/Button';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EButtonIconPosition, EButtonKinds } from '../../../utils/enums/Button.enum';
-import GroupButtons from '../../molecules/group-buttons/ButtonsGroup';
+import GroupButtons from '../../molecules/group-buttons/GroupButtons';
 
 const ButtonsCollection = () => {
   const componentName = 'm-buttons-collection';
