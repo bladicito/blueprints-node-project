@@ -25,7 +25,7 @@ const GroupInput = ({
   actionButton,
   autocompleteType,
 }: IGroupInputInterface) => {
-  const componentName = 'm-input-group';
+  const componentName = 'm-group-input';
 
   const cssClasses = useMemo(() => {
     if (disabled) {
@@ -37,11 +37,11 @@ const GroupInput = ({
   return (
     <div className={cssClasses}>
       {label ? (
-        <div className="m-input-group__label">
+        <div className="m-group-input__label">
           <Label state={state} attrFor={id} required={required} text={label} />
         </div>
       ) : null}
-      <div className="m-input-group__input">
+      <div className="m-group-input__input">
         <Input
           autocompleteType={autocompleteType}
           disabled={disabled}
@@ -60,16 +60,16 @@ const GroupInput = ({
         {icon && <Icon type={disabled ? EIcon.LOCKED : (icon as EIcon)} />}
       </div>
       {errorMessage || alertMessage ? (
-        <div className="m-input-group__message-wrapper">
+        <div className="m-group-input__message-wrapper">
           {actionButton && actionButton}
           {alertMessage && (
-            <p className="m-input-group__message m-input-group__message--alert">
+            <p className="m-group-input__message m-group-input__message--alert">
               <Icon type={EIcon.WARNING} />
               &nbsp;
               <span>{alertMessage}</span>
             </p>
           )}
-          {errorMessage && <p className="m-input-group__message m-input-group__message--error">{errorMessage}</p>}
+          {errorMessage && <p className="m-group-input__message m-group-input__message--error">{errorMessage}</p>}
         </div>
       ) : null}
     </div>
