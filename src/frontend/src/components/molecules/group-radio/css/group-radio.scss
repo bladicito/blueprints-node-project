@@ -2,7 +2,7 @@
 @import '../../../../../src/shared/utils/typo/css/typo';
 @import '../../../../../src/shared/utils/spacing/css/spacing';
 
-.m-radio-group {
+.m-group-radio {
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -22,7 +22,7 @@
       background-color: $color-white-stormtrooper;
     }
 
-    + .m-radio-group__item {
+    + .m-group-radio__item {
       @include margin-top('xs', 'fix');
     }
   }

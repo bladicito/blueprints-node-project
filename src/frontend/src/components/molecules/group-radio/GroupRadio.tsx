@@ -1,7 +1,7 @@
 import React from 'react';
 import Radio from '../../atoms/radio/Radio';
 import modifierState from '../../../utils/helpers/modifierState';
-import './css/radio-group.scss';
+import './css/group-radio.scss';
 import { IHtmlRadio, IHtmlRadioValueOnChange } from '../../../utils/interfaces/HtmlRadio.interface';
 import { ERadioGroupModifiers } from '../../../utils/enums/Radio.enum';
 
@@ -12,16 +12,16 @@ declare interface IProps {
   label?: string;
 }
 
-const RadioGroup = ({ options, modifier, label, onRadioSelection }: IProps) => {
-  const componentName = 'm-radio-group';
+const GroupRadio = ({ options, modifier, label, onRadioSelection }: IProps) => {
+  const componentName = 'm-group-radio';
   const cssClasses = modifierState(componentName, modifier, null);
   return (
     <div className={cssClasses}>
-      {label && <h5 className="m-radio-group__label">{label}</h5>}
-      <ul className="m-radio-group__items">
+      {label && <h5 className="m-group-radio__label">{label}</h5>}
+      <ul className="m-group-radio__items">
         {options.map((option, index) => {
           return (
-            <li className="m-radio-group__item" key={index}>
+            <li className="m-group-radio__item" key={index}>
               <Radio
                 disabled={option.disabled}
                 modifier={option.modifier}
@@ -42,4 +42,4 @@ const RadioGroup = ({ options, modifier, label, onRadioSelection }: IProps) => {
   );
 };
 
-export default RadioGroup;
+export default GroupRadio;

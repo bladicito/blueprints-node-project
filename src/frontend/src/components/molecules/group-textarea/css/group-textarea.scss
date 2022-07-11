@@ -47,15 +47,15 @@
 
   &__progress-bar {}
 
-  &.state-m-textarea-group--filled-in {
-    .m-textarea-group__label {
+  &.state-m-group-textarea-filled-in {
+    .m-group-textarea__label {
       opacity: 1;
     }
   }
 
-  &.state-m-textarea-group--error {
-    .m-textarea-group__message--error,
-    .m-textarea-group__label {
+  &.state-m-group-textarea--error {
+    .m-group-textarea__message--error,
+    .m-group-textarea__label {
       color: $color-red-vader-saber;
       opacity: 1;
     }

@@ -3,7 +3,7 @@
 @import '../../../../../src/shared/utils/animations/css/animations';
 @import '../../../../../src/shared/utils/input/css/input';
 
-.m-input-group {
+.m-group-input {
   &__message-wrapper {
     @include typo('body-4');
     margin-top: 8px;
@@ -42,46 +42,46 @@
     transition: opacity $animate-fast ease;
   }
 
-  &.state-m-input-group--empty {
-    .m-input-group__label {
+  &.state-m-group-input--empty {
+    .m-group-input__label {
       opacity: 0;
     }
   }
 
-  &.state-m-input-group--filled-in {
-    .m-input-group__label {
+  &.state-m-group-input--filled-in {
+    .m-group-input__label {
       opacity: 1;
     }
   }
 
-  &.state-m-input-group--error {
+  &.state-m-group-input--error {
     color: $color-red-vader-saber;
 
     .a-input {
       @include inputColorGenerator($color-red-vader-saber);
     }
 
-    .m-input-group__label {
+    .m-group-input__label {
       opacity: 1;
     }
 
-    .m-input-group__message--error {
+    .m-group-input__message--error {
       opacity: 1;
     }
   }
 
-  &.state-m-input-group--disabled:not(.state-m-input-group--error) {
+  &.state-m-group-input--disabled:not(.state-m-group-input--error) {
     color: $color-gray-hair-line;
 
     .a-input {
       @include inputColorGenerator($color-gray-hair-line);
     }
 
-    .m-input-group__label {
+    .m-group-input__label {
       opacity: 1;
     }
 
-    .m-input-group__message--error {
+    .m-group-input__message--error {
       opacity: 1;
     }
   }

@@ -2,13 +2,13 @@ import React, { useMemo } from 'react';
 import modifierState from '../../../utils/helpers/modifierState';
 import Label from '../../atoms/label/Label';
 import Input from '../../atoms/input/Input';
-import './css/input-group.scss';
+import './css/group-input.scss';
 import Icon from '../../atoms/icon/Icon';
 import { EIcon } from '../../../utils/enums/Icons.enum';
 import { EInputTypes } from '../../../utils/enums/Input.enum';
-import { IInputGroupInterface } from '../../../utils/interfaces/InputGroup.interface';
+import { IGroupInputInterface } from '../../../utils/interfaces/GroupInput.interface';
 
-const InputGroup = ({
+const GroupInput = ({
   alertMessage,
   disabled,
   errorMessage,
@@ -24,7 +24,7 @@ const InputGroup = ({
   value,
   actionButton,
   autocompleteType,
-}: IInputGroupInterface) => {
+}: IGroupInputInterface) => {
   const componentName = 'm-input-group';
 
   const cssClasses = useMemo(() => {
@@ -76,4 +76,4 @@ const InputGroup = ({
   );
 };
 
-export default InputGroup;
+export default GroupInput;

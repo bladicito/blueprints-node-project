@@ -2,7 +2,7 @@ import React from 'react';
 import { EIcon } from '../enums/Icons.enum';
 import { EAutoCompleteInput, EInputTypes } from '../enums/Input.enum';
 
-export interface IInputGroupInterface {
+export interface IGroupInputInterface {
   alertMessage?: string;
   actionButton?: React.ReactNode;
   disabled: boolean;

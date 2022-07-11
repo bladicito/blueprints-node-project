@@ -1,9 +1,9 @@
 @import '../modifier/horizontal';
 
-.m-radio-group--horizontal-right {
-  @extend .m-radio-group--horizontal;
+.m-group-radio--horizontal-right {
+  @extend .m-group-radio--horizontal;
 
-  .m-radio-group {
+  .m-group-radio {
     &__label {
       flex: initial;
     }

@@ -13,14 +13,14 @@ import ColorsTable from '../components/example/colors-table/ColorsTable';
 import './css/common.scss';
 import IconsTable from '../components/example/icons-table/IconsTable';
 import ButtonsCollection from '../components/example/buttons-collection/ButtonsCollection';
-import InputGroup from '../components/molecules/input-group/InputGroup';
+import GroupInput from '../components/molecules/group-input/GroupInput';
 import { EInputGroupStates, EInputTypes } from '../utils/enums/Input.enum';
 import { ECheckboxGroupModifiers, ECheckboxModifiers } from '../utils/enums/Checkbox.enum';
 import { v4 as uuidv4 } from 'uuid';
-import RadioGroup from '../components/molecules/radio-group/RadioGroup';
 import { ERadioGroupModifiers, ERadioModifiers } from '../utils/enums/Radio.enum';
 import Select from '../components/atoms/select/Select';
 import GroupCheckbox from '../components/molecules/group-checkbox/GroupCheckbox';
+import GroupRadio from '../components/molecules/group-radio/GroupRadio';
 
 const IndexPage = () => {
   const componentName = 'p-common';
@@ -43,7 +43,7 @@ const IndexPage = () => {
         </div>
         <div className="col-12 col-lg-6">
           <div className="p-common__block">
-            <InputGroup
+            <GroupInput
               state={[EInputGroupStates.ERROR]}
               errorMessage="Cannot be empty"
               placeholder="Dummy Text"
@@ -55,7 +55,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="p-common__block">
-            <InputGroup
+            <GroupInput
               state={[EInputGroupStates.FILLED_IN]}
               errorMessage="Cannot be empty"
               placeholder="Dummy Text"
@@ -67,7 +67,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="p-common__block">
-            <InputGroup
+            <GroupInput
               state={[EInputGroupStates.FILLED_IN]}
               errorMessage="Cannot be empty"
               alertMessage="Cannot be empty alert"
@@ -80,7 +80,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="p-common__block">
-            <InputGroup
+            <GroupInput
               state={[EInputGroupStates.FILLED_IN]}
               errorMessage="Cannot be empty"
               placeholder="Dummy Text"
@@ -92,7 +92,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="p-common__block">
-            <InputGroup
+            <GroupInput
               state={[EInputGroupStates.ERROR]}
               errorMessage="The provided value is wrong"
               alertMessage="Cannot be empty alert"
@@ -309,7 +309,7 @@ const IndexPage = () => {
           </div>
           <h2 style={{ marginTop: 30, marginBottom: 30 }}>Radios</h2>
           <div className="p-common__block">
-            <RadioGroup
+            <GroupRadio
               modifier={[ERadioGroupModifiers.HORIZONTAL]}
               options={[
                 {
@@ -370,7 +370,7 @@ const IndexPage = () => {
             />
           </div>
           <div className="p-common__block">
-            <RadioGroup
+            <GroupRadio
               options={[
                 {
                   modifier: [ERadioModifiers.RED],
