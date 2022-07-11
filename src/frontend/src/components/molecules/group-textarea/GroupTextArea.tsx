@@ -12,13 +12,12 @@ const removeBreakLines = (value: string) => {
   return value.replace(/\n/g, ' ');
 };
 
-const TextAreaGroup = ({
+const GroupTextArea = ({
   actionButton,
   alertMessage,
   allowBreakLines,
   disabled,
   errorMessage,
-  fieldName,
   icon,
   id,
   label,
@@ -70,9 +69,9 @@ const TextAreaGroup = ({
           notifyValueChange={(newValue: string) => {
             if (notifyValueChange && typeof notifyValueChange === 'function') {
               if (!allowBreakLines) {
-                notifyValueChange(fieldName, removeBreakLines(newValue));
+                notifyValueChange(removeBreakLines(newValue));
               } else {
-                notifyValueChange(fieldName, newValue);
+                notifyValueChange(newValue);
               }
             }
           }}
@@ -115,4 +114,4 @@ const TextAreaGroup = ({
   );
 };
 
-export default TextAreaGroup;
+export default GroupTextArea;

@@ -4,7 +4,7 @@
 @import '../../../../../src/shared/utils/animations/css/animations';
 
 .a-progress-bar {
-  color: $color-black;
+  color: $color-black-vader;
   &__scale {
     width: 100%;
     display: flex;;
@@ -15,39 +15,39 @@
     transition: background-color ease $animate-x-fast;
 
     &--1 {
-      background-color: lighten($color-vader-black, 85%);
+      background-color: lighten($color-black-vader, 85%);
     }
 
     &--2 {
-      background-color: lighten($color-vader-black, 75%);
+      background-color: lighten($color-black-vader, 75%);
     }
 
     &--3 {
-      background-color: lighten($color-vader-black, 65%);
+      background-color: lighten($color-black-vader, 65%);
     }
 
     &--4 {
-      background-color: lighten($color-vader-black, 55%);
+      background-color: lighten($color-black-vader, 55%);
     }
 
     &--5 {
-      background-color: lighten($color-vader-black, 45%);
+      background-color: lighten($color-black-vader, 45%);
     }
 
     &--6 {
-      background-color: lighten($color-vader-black, 35%);
+      background-color: lighten($color-black-vader, 35%);
     }
 
     &--7 {
-      background-color: lighten($color-vader-black, 25%);
+      background-color: lighten($color-black-vader, 25%);
     }
 
     &--8 {
-      background-color: lighten($color-vader-black, 10%);
+      background-color: lighten($color-black-vader, 10%);
     }
 
     &--9 {
-      background-color: lighten($color-vader-black, 0%);
+      background-color: lighten($color-black-vader, 0%);
     }
   }
 
@@ -60,123 +60,123 @@
   &.state-a-progress-bar {
 
     &--good {
-      color: $color-dude-black;
+      color: $color-gray-rat;
     }
 
     &--great {
-      color: $color-lime-green;
+      color: $color-green-baby-yoda;
 
       .a-progress-bar__tile {
         &--1 {
-          background-color: lighten($color-lime-green, 40%);
+          background-color: lighten($color-green-baby-yoda, 40%);
         }
 
         &--2 {
-          background-color: lighten($color-lime-green, 35%);
+          background-color: lighten($color-green-baby-yoda, 35%);
         }
 
         &--3 {
-          background-color: lighten($color-lime-green, 30%);
+          background-color: lighten($color-green-baby-yoda, 30%);
         }
 
         &--4 {
-          background-color: lighten($color-lime-green, 25%);
+          background-color: lighten($color-green-baby-yoda, 25%);
         }
 
         &--5 {
-          background-color: lighten($color-lime-green, 20%);
+          background-color: lighten($color-green-baby-yoda, 20%);
         }
 
         &--6 {
-          background-color: lighten($color-lime-green, 15%);
+          background-color: lighten($color-green-baby-yoda, 15%);
         }
 
         &--7 {
-          background-color: lighten($color-lime-green, 10%);
+          background-color: lighten($color-green-baby-yoda, 10%);
         }
 
         &--8 {
-          background-color: lighten($color-lime-green, 5%);
+          background-color: lighten($color-green-baby-yoda, 5%);
         }
 
         &--9 {
-          background-color: lighten($color-lime-green, 0%);
+          background-color: lighten($color-green-baby-yoda, 0%);
         }
       }
     }
 
     &--alert {
-      color: $color-tree-poppy;
+      color: $color-orange-rebellion;
 
       .a-progress-bar__tile {
         &--1 {
-          background-color: lighten($color-tree-poppy, 40%);
+          background-color: lighten($color-orange-rebellion, 40%);
         }
 
         &--2 {
-          background-color: lighten($color-tree-poppy, 35%);
+          background-color: lighten($color-orange-rebellion, 35%);
         }
 
         &--3 {
-          background-color: lighten($color-tree-poppy, 30%);
+          background-color: lighten($color-orange-rebellion, 30%);
         }
 
         &--4 {
-          background-color: lighten($color-tree-poppy, 25%);
+          background-color: lighten($color-orange-rebellion, 25%);
         }
 
         &--5 {
-          background-color: lighten($color-tree-poppy, 20%);
+          background-color: lighten($color-orange-rebellion, 20%);
         }
 
         &--6 {
-          background-color: lighten($color-tree-poppy, 15%);
+          background-color: lighten($color-orange-rebellion, 15%);
         }
 
         &--7 {
-          background-color: lighten($color-tree-poppy, 10%);
+          background-color: lighten($color-orange-rebellion, 10%);
         }
 
         &--8 {
-          background-color: lighten($color-tree-poppy, 5%);
+          background-color: lighten($color-orange-rebellion, 5%);
         }
 
         &--9 {
-          background-color: lighten($color-tree-poppy, 0%);
+          background-color: lighten($color-orange-rebellion, 0%);
         }
       }
     }
 
     &--danger {
-      color: $color-red;
+      color: $color-red-vader-saber;
 
       .a-progress-bar__tile {
         &--1 {
-          background-color: lighten($color-red, 40%);
+          background-color: lighten($color-red-vader-saber, 40%);
         }
         &--2 {
-          background-color: lighten($color-red, 35%);
+          background-color: lighten($color-red-vader-saber, 35%);
         }
         &--3 {
-          background-color: lighten($color-red, 30%);
+          background-color: lighten($color-red-vader-saber, 30%);
         }
         &--4 {
-          background-color: lighten($color-red, 25%);
+          background-color: lighten($color-red-vader-saber, 25%);
         }
         &--5 {
-          background-color: lighten($color-red, 20%);
+          background-color: lighten($color-red-vader-saber, 20%);
         }
         &--6 {
-          background-color: lighten($color-red, 15%);
+          background-color: lighten($color-red-vader-saber, 15%);
         }
         &--7 {
-          background-color: lighten($color-red, 10%);
+          background-color: lighten($color-red-vader-saber, 10%);
         }
         &--8 {
-          background-color: lighten($color-red, 5%);
+          background-color: lighten($color-red-vader-saber, 5%);
         }
         &--9 {
-          background-color: lighten($color-red, 0%);
+          background-color: lighten($color-red-vader-saber, 0%);
         }
       }
     }

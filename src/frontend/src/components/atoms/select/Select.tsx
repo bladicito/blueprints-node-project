@@ -1,36 +1,34 @@
-import React from 'react';
-import Icon from '../icon/Icon';
+import React, { useMemo } from 'react';
+import Icon, { EIConModifiers } from '../icon/Icon';
 import './css/select.scss';
 import Option from '../option/Option';
-import { IHtmlSelect } from '../../../utils/ts/interfaces/HtmlSelect.interface';
-import { EIcon } from '../../../utils/ts/enums/Icon.enum';
+import { IHtmlSelect } from '../../../utils/interfaces/HtmlSelect.interface';
+import { EIcon } from '../../../utils/enums/Icons.enum';
 import modifierState from '../../../utils/helpers/modifierState';
 
-const Select = (props: IHtmlSelect) => {
+const Select = ({
+  disabled = false,
+  id,
+  required = false,
+  name,
+  errorMessage,
+  label,
+  options,
+  value,
+  state = [],
+  notifyValueChange,
+}: IHtmlSelect) => {
   const componentName = 'a-select';
-  const {
-    disabled = false,
-    id,
-    required = false,
-    name,
-    errorMessage,
-    label,
-    options,
-    value,
-    state = [],
-    notifyValueChange,
-  } = props;
-  const labelFake = options.find((option) => option.value === value)?.label;
+  const labelFake = useMemo(() => {
+    return options.find((option) => option.value === value)?.label;
+  }, [options, value]);
 
-  if (disabled) {
-    state.push('disabled');
-  }
+  const cssClasses = useMemo(() => {
+    if (disabled) state.push('disabled');
+    if (value !== options[0].value) state.push('selected');
 
-  if (value !== props.options[0].value) {
-    state.push('selected');
-  }
-
-  const cssClasses = modifierState(componentName, [], state);
+    return modifierState(componentName, [], state);
+  }, [value, disabled, state, componentName, options]);
 
   return (
     <div className={cssClasses}>
@@ -43,7 +41,7 @@ const Select = (props: IHtmlSelect) => {
         <label className="a-select__label" htmlFor={id}>
           <span className="a-select__current-option">{labelFake}</span>
           <span className="a-select__icon">
-            <Icon type={EIcon.CHEVRON_DOWN} modifier={['fit-parent']} />
+            <Icon type={EIcon.CHEVRON_DOWN} modifier={[EIConModifiers.FIT_PARENT]} />
           </span>
         </label>
         {options ? (
@@ -69,7 +67,7 @@ const Select = (props: IHtmlSelect) => {
       </div>
       {errorMessage ? (
         <div className="a-select__message-wrapper">
-          <p className="a-select__message m-date-time-picker__message--error">{errorMessage}</p>
+          <p className="a-select__message a-select__message__message--error">{errorMessage}</p>
         </div>
       ) : null}
     </div>

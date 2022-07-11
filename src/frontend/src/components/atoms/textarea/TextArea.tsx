@@ -1,22 +1,20 @@
 import React from 'react';
 import './css/textarea.scss';
 import modifierState from '../../../utils/helpers/modifierState';
+import { IHtmlTextArea } from '../../../utils/interfaces/HtmlTextArea.interface';
 
-interface IProps {
-  disabled: boolean;
-  id: string;
-  modifier: Array<string>;
-  notifyValueChange: any;
-  placeholder: string;
-  state: Array<string>;
-  value: any;
-  maxLength?: number | null;
-  rows: number;
-}
-
-const TextArea = (props: IProps) => {
+const TextArea = ({
+  disabled,
+  id,
+  modifier,
+  notifyValueChange,
+  placeholder,
+  state,
+  value,
+  rows,
+  maxLength,
+}: IHtmlTextArea) => {
   const componentName = 'a-textarea';
-  const { disabled, id, modifier, notifyValueChange, placeholder, state, value, rows, maxLength } = props;
   const cssClasses = modifierState(componentName, modifier, state);
 
   return (

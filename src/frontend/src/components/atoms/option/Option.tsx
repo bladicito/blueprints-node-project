@@ -1,5 +1,5 @@
 import React from 'react';
-import { IHtmlOption } from '../../../utils/ts/interfaces/HtmlOption.interface';
+import { IHtmlOption } from '../../../utils/interfaces/HtmlOption.interface';
 
 const Option = (props: IHtmlOption) => {
   const { value, label, disabled, selected } = props;

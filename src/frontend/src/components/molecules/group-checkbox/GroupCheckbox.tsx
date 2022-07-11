@@ -2,7 +2,7 @@ import React from 'react';
 import Checkbox from '../../atoms/checkbox/Checkbox';
 import modifierState from '../../../utils/helpers/modifierState';
 import { IHtmlCheckbox, IHtmlCheckboxValueOnChange } from '../../../utils/interfaces/HtmlCheckbox.interface';
-import './css/checkbox-group.scss';
+import './css/group-checkbox.scss';
 
 declare interface IProps {
   modifier?: Array<string> | undefined | null;
@@ -10,16 +10,15 @@ declare interface IProps {
   notifyValueChange: (value: IHtmlCheckboxValueOnChange) => void;
 }
 
-const CheckboxGroup = (props: IProps) => {
-  const { options, modifier } = props;
-  const componentName = 'm-checkbox-group';
+const GroupCheckbox = ({ options, modifier, notifyValueChange }: IProps) => {
+  const componentName = 'm-group-checkbox';
   const cssClasses = modifierState(componentName, modifier, null);
   return (
     <div className={cssClasses}>
-      <ul className="m-checkbox-group__items">
+      <ul className="m-group-checkbox__items">
         {options.map((option, index) => {
           return (
-            <li className="m-checkbox-group__item" key={index} data-label={option.label} data-value={option.value}>
+            <li className="m-group-checkbox__item" key={index} data-label={option.label} data-value={option.value}>
               <Checkbox
                 modifier={option.modifier}
                 checked={option.checked}
@@ -28,7 +27,7 @@ const CheckboxGroup = (props: IProps) => {
                 id={option.id}
                 name={option.name}
                 notifyValueChange={(value: IHtmlCheckboxValueOnChange) => {
-                  props.notifyValueChange(value);
+                  notifyValueChange(value);
                 }}
               />
             </li>
@@ -39,4 +38,4 @@ const CheckboxGroup = (props: IProps) => {
   );
 };
 
-export default CheckboxGroup;
+export default GroupCheckbox;

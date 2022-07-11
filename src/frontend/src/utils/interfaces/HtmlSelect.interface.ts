@@ -4,7 +4,6 @@ export interface IHtmlSelect {
   disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
-  fieldName: string;
   id: string;
   label?: string;
   name: string;

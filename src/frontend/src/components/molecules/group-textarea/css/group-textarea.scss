@@ -2,7 +2,7 @@
 @import '../../../../../src/shared/utils/typo/css/typo';
 @import '../../../../../src/shared/utils/animations/css/animations';
 
-.m-textarea-group {
+.m-group-textarea {
   &__input {
     position: relative;
 
@@ -41,7 +41,7 @@
     }
 
     &--alert {
-      color: $color-tree-poppy
+      color: $color-orange-rebellion
     }
   }
 
@@ -56,7 +56,7 @@
   &.state-m-textarea-group--error {
     .m-textarea-group__message--error,
     .m-textarea-group__label {
-      color: $color-red;
+      color: $color-red-vader-saber;
       opacity: 1;
     }
   }

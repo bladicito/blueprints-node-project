@@ -3,7 +3,7 @@
 @import '../../../../../src/shared/utils/animations/css/animations';
 
 .a-select {
-  color: $color-death-star-black;
+  color: $color-black-vader;
 
   p {
     margin-bottom: 0;
@@ -28,7 +28,7 @@
   }
 
   &__label {
-    @include typo('interaction-elements');
+    @include typo('body-4');
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@
   }
 
   &.state-a-select--error {
-    color: $color-red;
+    color: $color-red-darth-maul;
 
     .a-select {
       &__fake-label-wrapper {
