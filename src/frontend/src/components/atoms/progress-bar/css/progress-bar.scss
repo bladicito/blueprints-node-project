@@ -1,0 +1,184 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/spacing/css/spacing';
+@import '../../../../../src/shared/utils/animations/css/animations';
+
+.a-progress-bar {
+  color: $color-black;
+  &__scale {
+    width: 100%;
+    display: flex;;
+  }
+
+  &__tile {
+    height: 4px;
+    transition: background-color ease $animate-x-fast;
+
+    &--1 {
+      background-color: lighten($color-vader-black, 85%);
+    }
+
+    &--2 {
+      background-color: lighten($color-vader-black, 75%);
+    }
+
+    &--3 {
+      background-color: lighten($color-vader-black, 65%);
+    }
+
+    &--4 {
+      background-color: lighten($color-vader-black, 55%);
+    }
+
+    &--5 {
+      background-color: lighten($color-vader-black, 45%);
+    }
+
+    &--6 {
+      background-color: lighten($color-vader-black, 35%);
+    }
+
+    &--7 {
+      background-color: lighten($color-vader-black, 25%);
+    }
+
+    &--8 {
+      background-color: lighten($color-vader-black, 10%);
+    }
+
+    &--9 {
+      background-color: lighten($color-vader-black, 0%);
+    }
+  }
+
+  &__progress {
+    height: 1px;
+    background-color: currentColor;
+    transition: background-color ease $animate-x-fast;
+  }
+
+  &.state-a-progress-bar {
+
+    &--good {
+      color: $color-dude-black;
+    }
+
+    &--great {
+      color: $color-lime-green;
+
+      .a-progress-bar__tile {
+        &--1 {
+          background-color: lighten($color-lime-green, 40%);
+        }
+
+        &--2 {
+          background-color: lighten($color-lime-green, 35%);
+        }
+
+        &--3 {
+          background-color: lighten($color-lime-green, 30%);
+        }
+
+        &--4 {
+          background-color: lighten($color-lime-green, 25%);
+        }
+
+        &--5 {
+          background-color: lighten($color-lime-green, 20%);
+        }
+
+        &--6 {
+          background-color: lighten($color-lime-green, 15%);
+        }
+
+        &--7 {
+          background-color: lighten($color-lime-green, 10%);
+        }
+
+        &--8 {
+          background-color: lighten($color-lime-green, 5%);
+        }
+
+        &--9 {
+          background-color: lighten($color-lime-green, 0%);
+        }
+      }
+    }
+
+    &--alert {
+      color: $color-tree-poppy;
+
+      .a-progress-bar__tile {
+        &--1 {
+          background-color: lighten($color-tree-poppy, 40%);
+        }
+
+        &--2 {
+          background-color: lighten($color-tree-poppy, 35%);
+        }
+
+        &--3 {
+          background-color: lighten($color-tree-poppy, 30%);
+        }
+
+        &--4 {
+          background-color: lighten($color-tree-poppy, 25%);
+        }
+
+        &--5 {
+          background-color: lighten($color-tree-poppy, 20%);
+        }
+
+        &--6 {
+          background-color: lighten($color-tree-poppy, 15%);
+        }
+
+        &--7 {
+          background-color: lighten($color-tree-poppy, 10%);
+        }
+
+        &--8 {
+          background-color: lighten($color-tree-poppy, 5%);
+        }
+
+        &--9 {
+          background-color: lighten($color-tree-poppy, 0%);
+        }
+      }
+    }
+
+    &--danger {
+      color: $color-red;
+
+      .a-progress-bar__tile {
+        &--1 {
+          background-color: lighten($color-red, 40%);
+        }
+        &--2 {
+          background-color: lighten($color-red, 35%);
+        }
+        &--3 {
+          background-color: lighten($color-red, 30%);
+        }
+        &--4 {
+          background-color: lighten($color-red, 25%);
+        }
+        &--5 {
+          background-color: lighten($color-red, 20%);
+        }
+        &--6 {
+          background-color: lighten($color-red, 15%);
+        }
+        &--7 {
+          background-color: lighten($color-red, 10%);
+        }
+        &--8 {
+          background-color: lighten($color-red, 5%);
+        }
+        &--9 {
+          background-color: lighten($color-red, 0%);
+        }
+      }
+    }
+  }
+}

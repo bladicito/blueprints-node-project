@@ -1,0 +1,34 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/placeholder/css/placeholder';
+@import '../../../../../src/shared/utils/animations/css/animations';
+
+.a-textarea {
+  @include typo('body-1');
+  @include placeholder($color-dude-black);
+  width: 100%;
+  padding: 4px 8px 2px 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $color-dude-black;
+  border-right: 1px solid $color-dude-black;
+  background-color: transparent;
+  color: inherit;
+  transition: all $animate-medium ease;
+  resize: none;
+
+  &:focus {
+    border-color: $color-plum;
+  }
+
+  &.state-a-textarea--filled-in {
+    border-color: currentColor;
+  }
+
+  &.state-a-textarea--error {
+    @include placeholder(lighten($color-red, 40%));
+    border-color: $color-red;
+  }
+}
+
+@import './modifier/text-small';

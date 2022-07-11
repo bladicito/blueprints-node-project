@@ -1,0 +1,5 @@
+@import '../../../../../../src/shared/utils/typo/css/typo';
+
+.a-textarea--text-small {
+  @include typo('body-3');
+}

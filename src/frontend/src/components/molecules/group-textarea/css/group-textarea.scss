@@ -1,0 +1,63 @@
+@import '../../../../../src/shared/utils/colors/css/colors';
+@import '../../../../../src/shared/utils/typo/css/typo';
+@import '../../../../../src/shared/utils/animations/css/animations';
+
+.m-textarea-group {
+  &__input {
+    position: relative;
+
+    .a-icon {
+      position: absolute;
+      right: 5px;
+      bottom: 15px
+    }
+  }
+
+  &__label {
+    @include typo('body-3');
+    opacity: 0;
+    transition: opacity $animate-fast ease;
+  }
+
+  &__bottom {
+    @include typo('body-4');
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+
+  &__message {
+    transition: opacity $animate-fast ease;
+    &--error {
+      opacity: 0;
+    }
+
+    &--alert {
+      color: $color-tree-poppy
+    }
+  }
+
+  &__progress-bar {}
+
+  &.state-m-textarea-group--filled-in {
+    .m-textarea-group__label {
+      opacity: 1;
+    }
+  }
+
+  &.state-m-textarea-group--error {
+    .m-textarea-group__message--error,
+    .m-textarea-group__label {
+      color: $color-red;
+      opacity: 1;
+    }
+  }
+}
