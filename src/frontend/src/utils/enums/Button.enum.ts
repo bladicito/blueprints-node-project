@@ -11,3 +11,8 @@ export enum EButtonIconPosition {
   TOP = 'top',
   BOTTOM = 'bottom',
 }
+
+export enum EButtonType {
+  BUTTON = 'button',
+  SUBMIT = 'submit',
+}

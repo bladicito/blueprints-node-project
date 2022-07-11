@@ -3,7 +3,7 @@ import modifierState from '../../../utils/helpers/modifierState';
 import './css/button.scss';
 import { IHtmlButton } from '../../../utils/interfaces/HtmlButton.interface';
 import { Link } from 'react-router-dom';
-import { EButtonIconPosition, EButtonKinds } from '../../../utils/enums/Button.enum';
+import { EButtonIconPosition, EButtonKinds, EButtonType } from '../../../utils/enums/Button.enum';
 import Icon, { EIConModifiers } from '../icon/Icon';
 
 // import { v4 as uuidv4 } from 'uuid';
@@ -41,7 +41,7 @@ const Button = ({
   modifier = [],
   state,
   text,
-  type = 'button',
+  type = EButtonType.BUTTON,
   icon,
   iconOnly = false,
   value,

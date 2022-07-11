@@ -1,4 +1,4 @@
-import { EButtonIconPosition, EButtonKinds } from '../enums/Button.enum';
+import { EButtonIconPosition, EButtonKinds, EButtonType } from '../enums/Button.enum';
 import { EIcon } from '../enums/Icons.enum';
 
 export interface IHtmlButton {
@@ -13,7 +13,7 @@ export interface IHtmlButton {
   modifier?: Array<string>;
   state?: Array<string> | null;
   text?: string;
-  type?: 'button' | 'submit';
+  type?: EButtonType;
   icon?: EIcon;
   iconPosition?: EButtonIconPosition;
   iconOnly?: boolean;
